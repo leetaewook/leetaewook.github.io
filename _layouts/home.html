@@ -3,11 +3,21 @@ layout: default
 ---
 
 <ul>
-{% for post in site.posts %}
-  <li>
+{% for post in paginator.posts %}  <li>
     <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
     <p>{{ post.content | strip_html | truncatewords: 33, "" }}</p>
   </li>
   <hr>
 {% endfor %}
 </ul>
+
+{% if paginator.total_pages > 1 %}
+<ul>
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+  {% endif %}
+</ul>
+{% endif %}

@@ -1,3 +1,16 @@
-# Site Options
 title: Title
 locale: ko-KR
+
+permalink: /:title
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/page:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+plugins:
+  - jekyll-paginate-v2
