@@ -1,12 +1,22 @@
 $body_text_color: #6e7173;
 $body_accent_text_color: #3d4144;
 $body_background: #f5f5fa;
-$card_text_color: rgba(255, 255, 255, 0.9);
-// $card_accent_text_color:
-$card_background: #424242;
+$body_tag_background: #fff;
+
+$card_text_color: #747474;
+$card_sub_text_color: #bababa;
+$card_accent_text_color: #000;
+$card_background: #fff;
+
+$card_tag_text_color: #fff;
+$card_tag_background: #2c3e50;
 
 $shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+$shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
 
 $desktop_breakpoint: 1020px;
 $tablet_breakpoint: 768px;

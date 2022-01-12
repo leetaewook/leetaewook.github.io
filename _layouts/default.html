@@ -1,3 +1,12 @@
+{% assign baseurl = site.baseurl | default: '/' %}
+{% assign current_path = page.url | remove: 'index.html' %}
+
+{% if current_path == baseurl %}
+  {% assign section_title = "All Posts" %}
+{% elsif page.autopages %}
+  {% assign section_title = page.autopages.display_name %}
+{% endif %}
+
 <!DOCTYPE html>
 <html {% if site.locale %}lang="{{ site.locale }}"{% endif %}>
   {% include head.html %}
@@ -7,7 +16,13 @@
         {% include siteinfo.html %}
         {% include tagnav.html %}
       </aside>
-      <main class="content">{{ content }}</main>
+      <div class="content">
+        {% if section_title %}
+          <h3 class="section-title">{{section_title}}</h3>
+        {% endif %}
+        <main>{{ content }}</main>
+        {% include paginator.html %}
+      </div>
     </div>
   </body>
 </html>

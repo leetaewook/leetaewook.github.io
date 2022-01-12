@@ -1,6 +1,7 @@
 title: My Blog Name
 title_seperator: '-' # default is '-'
 locale: ko-KR # default is none
+date_format: '%Y. %m. %d' #default is "%B %-d, %Y"
 
 siteinfo:
   name: NameNameNameNameNameName
@@ -13,7 +14,7 @@ permalink: /:title
 
 pagination:
   enabled: true
-  per_page: 3
+  per_page: 4
   permalink: '/page:num/'
   limit: 0
   sort_field: 'date'

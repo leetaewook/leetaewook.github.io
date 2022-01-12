@@ -1,7 +1,7 @@
 .main-container {
   display: flex;
   flex-direction: row;
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
 
   @media screen and (max-width: $desktop_breakpoint) {
@@ -26,8 +26,11 @@
 }
 
 .section-title {
+  display: flex;
+  align-items: flex-end;
   font-size: 1.2rem;
   font-weight: 600;
   color: $body_accent_text_color;
   text-transform: capitalize;
+  margin-bottom: 16px;
 }

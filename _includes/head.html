@@ -1,11 +1,11 @@
 {% assign title_separator = site.title_separator | default: '-' | replace: '|', '&#124;' %}
 
-{%- if paginator -%}
-  {%- assign title = site.title -%}
-{%- else -%}
-  {%- assign title = page.title | append: " " | append: title_separator | append: " " | append: site.title -%}
-{%- endif -%}
-{%- assign title = title | markdownify | strip_html | strip_newlines | escape_once -%}
+{% if paginator %}
+  {% assign title = site.title %}
+{% else %}
+  {% assign title = page.title | append: " " | append: title_separator | append: " " | append: site.title %}
+{% endif %}
+{% assign title = title | markdownify | strip_html | strip_newlines | escape_once %}
 
 <head>
   <meta charset="UTF-8" />

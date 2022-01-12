@@ -6,7 +6,7 @@
   &__title {
     display: flex;
     font-weight: 600;
-    align-items: center;
+    align-items: flex-end;
     color: $body_accent_text_color;
     margin-bottom: 8px;
 
@@ -28,7 +28,7 @@
   &__item {
     font-size: 0.68rem;
     color: $body_accent_text_color;
-    background: #fff;
+    background: $body_tag_background;
     padding: 8px 20px;
     margin-bottom: 8px;
     margin-right: 4px;
@@ -36,10 +36,11 @@
     border-radius: 8px;
     white-space: nowrap;
     box-shadow: $shadow;
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, transform 0.2s;
 
     &:hover {
       box-shadow: $shadow-lg;
+      transform: translateY(-1px);
     }
   }
 }
