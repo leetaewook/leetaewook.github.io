@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div>
-  <h1>태그: {% if page.autopages %}{{page.autopages.display_name}}{% endif %}</h1>
+  <h3 class="section-title">{% if page.autopages %}{{page.autopages.display_name}}{% endif %}</h3>
 
   <ul>
     {% for post in paginator.posts %}

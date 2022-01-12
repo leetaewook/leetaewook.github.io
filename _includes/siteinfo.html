@@ -4,9 +4,13 @@
       <a href="/"><img src="{{ site.siteinfo.avatar }}" loading="lazy" {% if site.title %}alt="{{ site.title }}"{% endif %} /></a>
     {% endif %}
   </figure>
-  <div class="siteinfo__content">
-    <h1 class="siteinfo__name">{{ site.siteinfo.name }}</h1>
-    <h2 class="siteinfo__description">{{ site.siteinfo.description }}</h2>
+  <div>
+    <div>
+      <a href="/">
+        <h1 class="siteinfo__name">{{ site.siteinfo.name }}</h1>
+        <h2 class="siteinfo__description">{{ site.siteinfo.description }}</h2>
+      </a>
+    </div>
     <ul class="siteinfo__socials">
       {% if site.siteinfo.socials.github %}
         <li><a href="{{ site.siteinfo.socials.github }}" target="_blank"><i class="ri-github-fill"></i></a></li>

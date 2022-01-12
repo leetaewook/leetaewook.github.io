@@ -1,10 +1,12 @@
 $body_text_color: #6e7173;
 $body_accent_text_color: #3d4144;
 $body_background: #f5f5fa;
-
 $card_text_color: rgba(255, 255, 255, 0.9);
 // $card_accent_text_color:
 $card_background: #424242;
+
+$shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 
 $desktop_breakpoint: 1020px;
 $tablet_breakpoint: 768px;

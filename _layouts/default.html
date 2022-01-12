@@ -2,12 +2,12 @@
 <html {% if site.locale %}lang="{{ site.locale }}"{% endif %}>
   {% include head.html %}
   <body>
-    <div class="main-container">
-      <aside class="main-container__left">
-        <div class="siteinfo-container">{% include siteinfo.html %}</div>
-        <div class="tagnav-container">{% include tagnav.html %}</div>
+    <div class="main-container{% if page.layout == 'post' %} post{% endif %}">
+      <aside class="main-container__aside">
+        {% include siteinfo.html %}
+        {% include tagnav.html %}
       </aside>
-      <main>{{ content }}</main>
+      <main class="content">{{ content }}</main>
     </div>
   </body>
 </html>

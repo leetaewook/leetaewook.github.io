@@ -5,9 +5,9 @@ locale: ko-KR # default is none
 siteinfo:
   name: NameNameNameNameNameName
   description: DescriptionDescriptionDescriptionDescriptionDescription
-  avatar: assets/images/avatar.png
+  avatar: /assets/images/avatar.png
   socials:
-    github: https://github.com/leetaewook
+    # github: https://github.com/leetaewook
 
 permalink: /:title
 

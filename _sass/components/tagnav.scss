@@ -1,0 +1,45 @@
+.tagnav {
+  @media screen and (max-width: $desktop_breakpoint) {
+    padding: 12px;
+  }
+
+  &__title {
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    color: $body_accent_text_color;
+    margin-bottom: 8px;
+
+    i {
+      font-size: 1.4rem;
+      margin-right: 4px;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    font-size: 0.68rem;
+    color: $body_accent_text_color;
+    background: #fff;
+    padding: 8px 20px;
+    margin-bottom: 8px;
+    margin-right: 4px;
+    text-decoration: none;
+    border-radius: 8px;
+    white-space: nowrap;
+    box-shadow: $shadow;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+      box-shadow: $shadow-lg;
+    }
+  }
+}

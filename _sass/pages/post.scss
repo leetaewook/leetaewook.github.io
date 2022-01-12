@@ -1,0 +1,5 @@
+.main-container.post .tagnav {
+  @media screen and (max-width: $desktop_breakpoint) {
+    display: none;
+  }
+}

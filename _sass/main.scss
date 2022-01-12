@@ -2,13 +2,19 @@
 @import '_utility';
 
 @import 'components/siteinfo';
+@import 'components/tagnav';
 
 @import 'pages/deafult';
+@import 'pages/post';
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {
@@ -21,7 +27,7 @@ html {
 
 body {
   min-height: 150vh;
-  min-width: 200px;
+  min-width: 360px;
   background-color: $body_background;
 }
 
@@ -29,10 +35,6 @@ body {
   padding: 32px;
 
   @media screen and (max-width: $tablet_breakpoint) {
-    padding: 16px;
-  }
-
-  @media screen and (max-width: $mobile_breakpoint) {
-    padding: 8px;
+    padding: 24px;
   }
 }
