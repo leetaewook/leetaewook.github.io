@@ -1,0 +1,38 @@
+@import '_variables';
+@import '_utility';
+
+@import 'components/siteinfo';
+
+@import 'pages/deafult';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 20px;
+
+  @media screen and (max-width: $tablet_breakpoint) {
+    font-size: 18px;
+  }
+}
+
+body {
+  min-height: 150vh;
+  min-width: 200px;
+  background-color: $body_background;
+}
+
+.main-container {
+  padding: 32px;
+
+  @media screen and (max-width: $tablet_breakpoint) {
+    padding: 16px;
+  }
+
+  @media screen and (max-width: $mobile_breakpoint) {
+    padding: 8px;
+  }
+}

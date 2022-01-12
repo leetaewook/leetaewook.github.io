@@ -1,0 +1,17 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: $desktop_breakpoint) {
+    flex-direction: column;
+  }
+
+  &__left {
+    width: 260px;
+    word-break: break-all;
+
+    @media screen and (max-width: $desktop_breakpoint) {
+      width: 100%;
+    }
+  }
+}

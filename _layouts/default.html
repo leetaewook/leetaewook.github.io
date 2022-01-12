@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html {% if site.locale %}lang={{ site.locale }}{% endif %}>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  </head>
-  <header>헤더</header>
-  <body>{{ content }}</body>
+<html {% if site.locale %}lang="{{ site.locale }}"{% endif %}>
+  {% include head.html %}
+  <body>
+    <div class="main-container">
+      <aside class="main-container__left">
+        <div class="siteinfo-container">{% include siteinfo.html %}</div>
+        <div class="tagnav-container">{% include tagnav.html %}</div>
+      </aside>
+      <main>{{ content }}</main>
+    </div>
+  </body>
 </html>

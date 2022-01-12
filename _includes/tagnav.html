@@ -1,0 +1,8 @@
+<hr>
+<h3>태그들의 목록</h3>
+{% for page in site.pages %}  
+  {% if page.title and page.autogen == nil and page.autopage != nil %}
+  <a href="{{ page.url }}">{{ page.autopage.display_name }}</a>
+  {% endif %}
+{% endfor %}
+<hr>

@@ -1,0 +1,16 @@
+<header class="siteinfo">
+  <figure class="siteinfo__avatar">
+    {% if site.siteinfo.avatar %}
+      <a href="/"><img src="{{ site.siteinfo.avatar }}" loading="lazy" {% if site.title %}alt="{{ site.title }}"{% endif %} /></a>
+    {% endif %}
+  </figure>
+  <div class="siteinfo__content">
+    <h1 class="siteinfo__name">{{ site.siteinfo.name }}</h1>
+    <h2 class="siteinfo__description">{{ site.siteinfo.description }}</h2>
+    <ul class="siteinfo__socials">
+      {% if site.siteinfo.socials.github %}
+        <li><a href="{{ site.siteinfo.socials.github }}" target="_blank"><i class="ri-github-fill"></i></a></li>
+      {% endif %}
+    </ul>
+  </div>
+</header>

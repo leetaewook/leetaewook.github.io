@@ -1,5 +1,13 @@
-title: Title
-locale: ko-KR
+title: My Blog Name
+title_seperator: '-' # default is '-'
+locale: ko-KR # default is none
+
+siteinfo:
+  name: NameNameNameNameNameName
+  description: DescriptionDescriptionDescriptionDescriptionDescription
+  avatar: assets/images/avatar.png
+  socials:
+    github: https://github.com/leetaewook
 
 permalink: /:title
 
@@ -7,10 +15,22 @@ pagination:
   enabled: true
   per_page: 3
   permalink: '/page:num/'
-  title: ' - page :num'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
+
+autopages:
+  enabled: true
+  collections:
+    enabled: false
+  tags:
+    enabled: true
+    layouts:
+      - autopage_tags.html
+
+defaults:
+  - values:
+      layout: post
 
 plugins:
   - jekyll-paginate-v2
