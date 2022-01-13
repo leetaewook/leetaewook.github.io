@@ -1,0 +1,39 @@
+.pager {
+  width: 100%;
+  display: flex;
+  background-color: $card_background;
+  box-shadow: $shadow-md;
+  border-radius: 10px;
+  overflow: hidden;
+  list-style: none;
+  margin-top: 36px;
+
+  &__item {
+    flex: 1 1 0;
+    max-width: 20%;
+    color: $card_text_color;
+    text-align: center;
+    transition: background-color 0.2s;
+
+    &:not(.disabled):hover {
+      background-color: $card_background_selected;
+    }
+
+    &.selected {
+      color: $card_accent_text_color;
+      background-color: $card_background_selected;
+    }
+
+    &.disabled {
+      cursor: default;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    padding: 16px 0px;
+  }
+}

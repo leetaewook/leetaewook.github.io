@@ -4,9 +4,9 @@ locale: ko-KR # default is none
 date_format: '%Y. %m. %d' #default is "%B %-d, %Y"
 
 siteinfo:
-  name: NameNameNameNameNameName
-  description: DescriptionDescriptionDescriptionDescriptionDescription
-  avatar: /assets/images/avatar.png
+  name: NameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameName
+  description: DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription
+  avatar: /assets/images/avatar.png # TODO : baseurl에 더하기
   socials:
     # github: https://github.com/leetaewook
 
@@ -18,7 +18,10 @@ pagination:
   permalink: '/page:num/'
   limit: 0
   sort_field: 'date'
-  sort_reverse: true
+  sort_reverse:
+  trail:
+    before: 2
+    after: 2
 
 autopages:
   enabled: true

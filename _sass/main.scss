@@ -1,9 +1,10 @@
 @import '_variables';
-@import '_utility';
 
 @import 'components/siteinfo';
 @import 'components/tagnav';
 @import 'components/postlist';
+@import 'components/pager';
+@import 'components/footer';
 
 @import 'pages/deafult';
 @import 'pages/post';
@@ -27,7 +28,6 @@ html {
 }
 
 body {
-  min-height: 150vh;
   min-width: 360px;
   background-color: $body_background;
 }

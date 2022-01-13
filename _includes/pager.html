@@ -1,0 +1,38 @@
+{% assign pageurl = page.url | remove: 'index.html' %}
+{% assign trail_first_page = paginator.page_trail[0].num %}
+{% assign trail_last_page = paginator.page_trail[-1].num %}
+
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.first_page %}
+      <li class="pager__item{% if pageurl == paginator.first_page_path %} selected{% endif %}">
+          <a class="pager__link" href="{{ paginator.first_page_path | prepend: site.baseurl | replace: '//', '/' }}">1</a>
+      </li>
+    {% endif %}
+
+    {% if trail_first_page > paginator.first_page %}
+      <li class="pager__item disabled"><span class="pager__link">…</span></li>
+    {% endif %}
+
+    {% if paginator.page_trail %}
+      {% for trail in paginator.page_trail %}
+        {% assign path = trail.path | remove: 'index.html' %}
+        {% if path != paginator.first_page_path and path != paginator.last_page_path %}
+          <li class="pager__item{% if page.url == trail.path %} selected{% endif %}">
+              <a class="pager__link" href="{{ trail.path | prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}">{{ trail.num }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if trail_last_page < paginator.last_page %}
+    <li class="pager__item disabled"><span class="pager__link">…</span></li>
+    {% endif %}
+
+    {% if paginator.last_page %}
+      <li class="pager__item{% if pageurl == paginator.last_page_path %} selected{% endif %}">
+          <a class="pager__link" href="{{ paginator.last_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ paginator.last_page }}</a>
+      </li>
+    {% endif %}
+</ul>
+{% endif %}
