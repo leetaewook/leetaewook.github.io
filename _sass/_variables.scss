@@ -1,24 +1,84 @@
-$body_text_color: #6e7173;
-$body_accent_text_color: #3d4144;
-$body_background: #f5f5fa;
-$body_tag_background: #fff;
+/*
+   Typography
+   ========================================================================== */
+$serif: Georgia, Times, serif !default;
+$sans-serif: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial,
+  sans-serif !default;
+$monospace: Monaco, Consolas, 'Lucida Console', monospace !default;
 
-$card_text_color: #747474;
-$card_sub_text_color: #bababa;
-$card_accent_text_color: #000;
-$card_background: #fff;
-$card_background_selected: #eaeaea;
+/*
+   Colors
+   ========================================================================== */
 
-$card_tag_text_color: #fff;
-$card_tag_background: #2c3e50;
+$body_text_color: #6e7173 !default;
+$body_accent_text_color: #3d4144 !default;
+$body_background: #f5f5fa !default;
+$body_tag_background: #fff !default;
 
-$shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-$shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+$card_text_color: #3d4144 !default;
+$card_sub_text_color: #bababa !default;
+$card_accent_text_color: #000 !default;
+$card_background: #fff !default;
+$card_background_selected: #eaeaea !default;
 
-$desktop_breakpoint: 1020px;
-$tablet_breakpoint: 768px;
-$mobile_breakpoint: 468px;
+$card_tag_text_color: #fff !default;
+$card_tag_background: #2c3e50 !default;
+
+$link-color: #00aeff;
+$link-hover-color: #007ab3;
+
+$gray: #7a8288 !default;
+$dark-gray: mix(#000, $gray, 50%) !default;
+$darker-gray: mix(#000, $gray, 60%) !default;
+$light-gray: mix(#fff, $gray, 50%) !default;
+$lighter-gray: mix(#fff, $gray, 90%) !default;
+
+/* notices */
+$notice-background-mix: 80% !default;
+$code-notice-background-mix: 90% !default;
+$primary-color: #6f777d !default;
+$success-color: #3fa63f !default;
+$warning-color: #d67f05 !default;
+$danger-color: #ee5f5b !default;
+$info-color: #3b9cba !default;
+$focus-color: $primary-color !default;
+$active-color: mix(#fff, $primary-color, 80%) !default;
+
+/* code */
+$code-background-color: #f9f2f4;
+$code-color: #c7254e;
+
+/* codeblock syntax highlight */
+$base00: #263238;
+$base01: #2e3c43;
+$base02: #314549;
+$base03: #546e7a;
+$base04: #b2ccd6;
+$base05: #eeffff;
+$base06: #eeffff;
+$base07: #ffffff;
+$base08: #f07178;
+$base09: #f78c6c;
+$base0a: #ffcb6b;
+$base0b: #c3e88d;
+$base0c: #89ddff;
+$base0d: #82aaff;
+$base0e: #c792ea;
+$base0f: #ff5370;
+
+/*
+   Breakpoints
+   ========================================================================== */
+$desktop-breakpoint: 1020px;
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 468px;
+
+/*
+   Box-Shadows
+   ========================================================================== */
+$shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1) !default;
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1) !default;
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !default;
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !default;
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !default;
+$shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05) !default;

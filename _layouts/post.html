@@ -2,4 +2,46 @@
 layout: default
 ---
 
-{{ content }}
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+
+<!-- {{ page.title }}
+{{ page.description }}
+{{ page.cover }} -->
+
+<article class="post-container">
+  {% if page.cover %}
+    <section class="post-cover">
+      <a href="{{ page.url }}"><img src="{{ page.cover }}"></a>
+    </section>
+  {% endif %}
+    
+  <header class="post-summary">
+    {% if page.tags and page.tags.size > 0 %}  
+      <ul class="post-tags">
+        {% for tag in page.tags %}
+          <li><h4 class="post-tag">{{ tag }}</h4></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    
+    {% if page.title %}
+      <h1 class="post-title">{{ page.title }}</h1>
+    {% endif %}
+
+    {% if page.description %}
+      <h2 class="post-description">{{ page.description }}</h2>
+    {% endif %}
+
+    {% if page.date %}
+      <div class="post-time">
+        <i class="ri-calendar-line"></i>
+        <time>{{ page.date | date: date_format }}</time>
+      </div>
+    {% endif %}
+
+  </header>
+
+  <section class="post-content markdown-body">
+    {{ content }}
+  </section>
+</article>

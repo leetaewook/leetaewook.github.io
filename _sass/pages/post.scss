@@ -1,5 +1,87 @@
 .main-container.post .tagnav {
-  @media screen and (max-width: $desktop_breakpoint) {
+  @media screen and (max-width: $desktop-breakpoint) {
     display: none;
+  }
+}
+
+.post-container {
+  background-color: $card_background;
+  border-radius: 10px;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  width: 100%;
+
+  .post-cover {
+    width: 100%;
+
+    img {
+      width: 100%;
+      max-height: 28vh;
+      object-fit: cover;
+    }
+  }
+
+  .post-summary {
+    padding: 24px 32px;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      padding: 24px;
+    }
+
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      margin-bottom: 12px;
+
+      .post-tag {
+        font-size: 0.68rem;
+        font-weight: 400;
+        padding: 6px 12px;
+        border-radius: 6px;
+        color: #fff;
+        background-color: #2c3e50;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+        margin-right: 8px;
+        margin-bottom: 6px;
+      }
+    }
+
+    .post-title {
+      color: $card_accent_text_color;
+      font-size: 1.26rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .post-description {
+      color: $card_text_color;
+      font-size: 0.92rem;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .post-time {
+      color: $card_sub_text_color;
+      font-weight: 400;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+
+      i {
+        font-size: 1.02rem;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .post-content {
+    padding: 24px;
+    color: $card_text_color;
+    font-size: 0.9rem;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      padding: 24px 16px;
+    }
   }
 }

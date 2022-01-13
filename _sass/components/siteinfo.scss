@@ -3,7 +3,7 @@
   flex-direction: column;
   margin-bottom: 32px;
 
-  @media screen and (max-width: $desktop_breakpoint) {
+  @media screen and (max-width: $desktop-breakpoint) {
     flex-direction: row;
     align-items: center;
     margin-bottom: 16px;
@@ -15,11 +15,11 @@
     margin: 0 0 12px 0;
     flex-shrink: 0;
 
-    @media screen and (max-width: $desktop_breakpoint) {
+    @media screen and (max-width: $desktop-breakpoint) {
       margin: 0 16px 0 0;
     }
 
-    @media screen and (max-width: $mobile_breakpoint) {
+    @media screen and (max-width: $mobile-breakpoint) {
       width: 98px;
       height: 98px;
     }

@@ -1,5 +1,9 @@
 @import '_variables';
 
+@import 'vendors/_syntax';
+@import 'vendors/_notices';
+@import 'vendors/_github';
+
 @import 'components/siteinfo';
 @import 'components/tagnav';
 @import 'components/postlist';
@@ -22,7 +26,7 @@ a {
 html {
   font-size: 20px;
 
-  @media screen and (max-width: $tablet_breakpoint) {
+  @media screen and (max-width: $tablet-breakpoint) {
     font-size: 18px;
   }
 }
@@ -35,7 +39,11 @@ body {
 .main-container {
   padding: 32px;
 
-  @media screen and (max-width: $tablet_breakpoint) {
+  @media screen and (max-width: $tablet-breakpoint) {
     padding: 24px;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 16px;
   }
 }

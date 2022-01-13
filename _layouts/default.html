@@ -1,7 +1,4 @@
-{% assign baseurl = site.baseurl | default: '/' %}
-{% assign current_path = page.url | remove: 'index.html' %}
-
-{% if current_path == baseurl %}
+{% if page.layout == 'home' %}
   {% assign section_title = "All Posts" %}
 {% elsif page.autopages %}
   {% assign section_title = page.autopages.display_name %}
