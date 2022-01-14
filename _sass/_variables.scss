@@ -20,29 +20,62 @@ $card_sub_text_color: #bababa !default;
 $card_accent_text_color: #000 !default;
 $card_background: #fff !default;
 $card_background_selected: #eaeaea !default;
-
 $card_tag_text_color: #fff !default;
 $card_tag_background: #2c3e50 !default;
 
-$link-color: #00aeff;
-$link-hover-color: #007ab3;
-
-$gray: #7a8288 !default;
-$dark-gray: mix(#000, $gray, 50%) !default;
-$darker-gray: mix(#000, $gray, 60%) !default;
-$light-gray: mix(#fff, $gray, 50%) !default;
-$lighter-gray: mix(#fff, $gray, 90%) !default;
+/* markdown colors */
+$color-prettylights-syntax-comment: #6e7781;
+$color-prettylights-syntax-constant: #0550ae;
+$color-prettylights-syntax-entity: #8250df;
+$color-prettylights-syntax-storage-modifier-import: #24292f;
+$color-prettylights-syntax-entity-tag: #116329;
+$color-prettylights-syntax-keyword: #cf222e;
+$color-prettylights-syntax-string: #0a3069;
+$color-prettylights-syntax-variable: #953800;
+$color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+$color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+$color-prettylights-syntax-invalid-illegal-bg: #82071e;
+$color-prettylights-syntax-carriage-return-text: #f6f8fa;
+$color-prettylights-syntax-carriage-return-bg: #cf222e;
+$color-prettylights-syntax-string-regexp: #116329;
+$color-prettylights-syntax-markup-list: #3b2300;
+$color-prettylights-syntax-markup-heading: #0550ae;
+$color-prettylights-syntax-markup-italic: #24292f;
+$color-prettylights-syntax-markup-bold: #24292f;
+$color-prettylights-syntax-markup-deleted-text: #82071e;
+$color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+$color-prettylights-syntax-markup-inserted-text: #116329;
+$color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+$color-prettylights-syntax-markup-changed-text: #953800;
+$color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+$color-prettylights-syntax-markup-ignored-text: #eaeef2;
+$color-prettylights-syntax-markup-ignored-bg: #0550ae;
+$color-prettylights-syntax-meta-diff-range: #8250df;
+$color-prettylights-syntax-brackethighlighter-angle: #57606a;
+$color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+$color-prettylights-syntax-constant-other-reference-link: #0a3069;
+$color-fg-default: #24292f;
+$color-fg-muted: #57606a;
+$color-fg-subtle: #6e7781;
+$color-canvas-default: #ffffff;
+$color-canvas-subtle: #f6f8fa;
+$color-border-default: #d0d7de;
+$color-border-muted: hsla(210, 18%, 87%, 1);
+$color-neutral-muted: rgba(175, 184, 193, 0.2);
+$color-accent-fg: #0969da;
+$color-accent-emphasis: #0969da;
+$color-attention-subtle: #fff8c5;
+$color-danger-fg: #cf222e;
 
 /* notices */
+$color-notice-default: mix(#fff, #7a8288, 50%);
+$color-notice-primary: #6f777d !default;
+$color-notice-info: #3b9cba !default;
+$color-notice-success: #3fa63f !default;
+$color-notice-warning: #d67f05 !default;
+$color-notice-danger: #ee5f5b !default;
 $notice-background-mix: 80% !default;
 $code-notice-background-mix: 90% !default;
-$primary-color: #6f777d !default;
-$success-color: #3fa63f !default;
-$warning-color: #d67f05 !default;
-$danger-color: #ee5f5b !default;
-$info-color: #3b9cba !default;
-$focus-color: $primary-color !default;
-$active-color: mix(#fff, $primary-color, 80%) !default;
 
 /* code */
 $code-background-color: #f9f2f4;

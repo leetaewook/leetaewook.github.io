@@ -1,8 +1,9 @@
 @import '_variables';
 
+// @import 'vendors/_breakpoint';
 @import 'vendors/_syntax';
 @import 'vendors/_notices';
-@import 'vendors/_github';
+@import 'vendors/_markdown-body';
 
 @import 'components/siteinfo';
 @import 'components/tagnav';

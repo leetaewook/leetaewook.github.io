@@ -1,20 +1,10 @@
-/* ==========================================================================
-   NOTICE TEXT BLOCKS
-   ========================================================================== */
-
-/**
- *  Default Kramdown usage (no indents!):
- *  <div class="notice" markdown="1">
- *  #### Headline for the Notice
- *  Text for the notice
- *  </div>
- */
-
 @mixin notice($notice-color) {
   margin: 2em 0 !important; /* override*/
   padding: 1em;
-  font-size: 0.9em !important;
-  text-indent: 0 !important;
+  color: $color-fg-default;
+  // font-family: $global-font-family;
+  font-size: 0.85em !important;
+  text-indent: initial; /* override*/
   background-color: mix($card_background, $notice-color, $notice-background-mix);
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba($notice-color, 0.25);
@@ -52,7 +42,7 @@
   }
 
   code {
-    color: inherit !important;
+    color: inherit;
     background-color: mix($card_background, $notice-color, $code-notice-background-mix);
   }
 
@@ -67,38 +57,34 @@
   }
 }
 
-/* Default notice */
+.markdown-body {
+  /* Default notice */
+  .notice {
+    @include notice($color-notice-default);
+  }
 
-.notice {
-  @include notice($light-gray);
-}
+  /* Primary notice */
+  .notice--primary {
+    @include notice($color-notice-primary);
+  }
 
-/* Primary notice */
+  /* Info notice */
+  .notice--info {
+    @include notice($color-notice-info);
+  }
 
-.notice--primary {
-  @include notice($primary-color);
-}
+  /* Warning notice */
+  .notice--warning {
+    @include notice($color-notice-warning);
+  }
 
-/* Info notice */
+  /* Success notice */
+  .notice--success {
+    @include notice($color-notice-success);
+  }
 
-.notice--info {
-  @include notice($info-color);
-}
-
-/* Warning notice */
-
-.notice--warning {
-  @include notice($warning-color);
-}
-
-/* Success notice */
-
-.notice--success {
-  @include notice($success-color);
-}
-
-/* Danger notice */
-
-.notice--danger {
-  @include notice($danger-color);
+  /* Danger notice */
+  .notice--danger {
+    @include notice($color-notice-danger);
+  }
 }

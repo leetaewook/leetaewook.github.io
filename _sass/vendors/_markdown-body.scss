@@ -1,20 +1,9 @@
-/*
-github-markdown-css
-https://github.com/sindresorhus/github-markdown-css
-
-MIT License
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
-
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   margin: 0;
-  color: #24292f;
-  background-color: #ffffff;
+  color: $color-fg-default;
+  background-color: $color-canvas-default;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji';
   font-size: 16px;
@@ -49,6 +38,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   display: block;
 }
 
+.markdown-body figure {
+  margin: 1em 40px;
+}
+
+.markdown-body figure figcaption {
+  font-size: 0.88em;
+}
+
 .markdown-body summary {
   display: list-item;
 }
@@ -59,7 +56,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .markdown-body a {
   background-color: transparent;
-  color: #0969da;
+  color: $color-accent-fg;
   text-decoration: none;
 }
 
@@ -87,12 +84,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   font-weight: 600;
   padding-bottom: 0.3em;
   font-size: 2em;
-  border-bottom: 1px solid hsla(210, 18%, 87%, 1);
+  border-bottom: 1px solid $color-border-muted;
 }
 
 .markdown-body mark {
-  background-color: #fff8c5;
-  color: #24292f;
+  background-color: $color-attention-subtle;
+  color: $color-fg-default;
 }
 
 .markdown-body small {
@@ -119,7 +116,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border-style: none;
   max-width: 100%;
   box-sizing: content-box;
-  background-color: #ffffff;
+  background-color: $color-canvas-default;
 }
 
 .markdown-body code,
@@ -130,23 +127,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   font-size: 1em;
 }
 
-.markdown-body figure {
-  margin: 1em 40px;
-}
-
-.markdown-body figure figcaption {
-  font-size: 0.82em;
-}
-
 .markdown-body hr {
   box-sizing: content-box;
   overflow: hidden;
   background: transparent;
-  border-bottom: 1px solid hsla(210, 18%, 87%, 1);
+  border-bottom: 1px solid $color-border-muted;
   height: 0.25em;
   padding: 0;
   margin: 24px 0;
-  background-color: #d0d7de;
+  background-color: $color-border-default;
   border: 0;
 }
 
@@ -251,13 +240,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding: 3px 5px;
   font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
   line-height: 10px;
-  color: #24292f;
+  color: $color-fg-default;
   vertical-align: middle;
-  background-color: #f6f8fa;
-  border: solid 1px rgba(175, 184, 193, 0.2);
-  border-bottom-color: rgba(175, 184, 193, 0.2);
-  border-radius: 6px;
-  box-shadow: inset 0 -1px 0 rgba(175, 184, 193, 0.2);
+  background-color: $color-canvas-subtle;
+  border: solid 1px $color-neutral-muted;
+  border-bottom-color: $color-neutral-muted;
+  border-radius: 4px;
+  box-shadow: inset 0 -1px 0 $color-neutral-muted;
 }
 
 .markdown-body h1,
@@ -276,7 +265,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   font-weight: 600;
   padding-bottom: 0.3em;
   font-size: 1.5em;
-  border-bottom: 1px solid hsla(210, 18%, 87%, 1);
+  border-bottom: 1px solid $color-border-muted;
 }
 
 .markdown-body h3 {
@@ -297,7 +286,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .markdown-body h6 {
   font-weight: 600;
   font-size: 0.85em;
-  color: #57606a;
+  color: $color-fg-muted;
 }
 
 .markdown-body p {
@@ -308,8 +297,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .markdown-body blockquote {
   margin: 0;
   padding: 0 1em;
-  color: #57606a;
-  border-left: 0.25em solid #d0d7de;
+  color: $color-fg-muted;
+  border-left: 0.25em solid $color-border-default;
 }
 
 .markdown-body ul,
@@ -341,13 +330,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   font-size: 12px;
 }
 
-.markdown-body pre {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-  font-size: 12px;
-  word-wrap: normal;
-}
+// .markdown-body pre {
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+//   font-size: 12px;
+//   word-wrap: normal;
+// }
 
 .markdown-body .octicon {
   display: inline-block;
@@ -357,7 +346,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .markdown-body ::placeholder {
-  color: #6e7781;
+  color: $color-fg-subtle;
   opacity: 1;
 }
 
@@ -369,30 +358,30 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .markdown-body .pl-c {
-  color: #6e7781;
+  color: $color-prettylights-syntax-comment;
 }
 
 .markdown-body .pl-c1,
 .markdown-body .pl-s .pl-v {
-  color: #0550ae;
+  color: $color-prettylights-syntax-constant;
 }
 
 .markdown-body .pl-e,
 .markdown-body .pl-en {
-  color: #8250df;
+  color: $color-prettylights-syntax-entity;
 }
 
 .markdown-body .pl-smi,
 .markdown-body .pl-s .pl-s1 {
-  color: #24292f;
+  color: $color-prettylights-syntax-storage-modifier-import;
 }
 
 .markdown-body .pl-ent {
-  color: #116329;
+  color: $color-prettylights-syntax-entity-tag;
 }
 
 .markdown-body .pl-k {
-  color: #cf222e;
+  color: $color-prettylights-syntax-keyword;
 }
 
 .markdown-body .pl-s,
@@ -402,90 +391,90 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .markdown-body .pl-sr .pl-cce,
 .markdown-body .pl-sr .pl-sre,
 .markdown-body .pl-sr .pl-sra {
-  color: #0a3069;
+  color: $color-prettylights-syntax-string;
 }
 
 .markdown-body .pl-v,
 .markdown-body .pl-smw {
-  color: #953800;
+  color: $color-prettylights-syntax-variable;
 }
 
 .markdown-body .pl-bu {
-  color: #82071e;
+  color: $color-prettylights-syntax-brackethighlighter-unmatched;
 }
 
 .markdown-body .pl-ii {
-  color: #f6f8fa;
-  background-color: #82071e;
+  color: $color-prettylights-syntax-invalid-illegal-text;
+  background-color: $color-prettylights-syntax-invalid-illegal-bg;
 }
 
 .markdown-body .pl-c2 {
-  color: #f6f8fa;
-  background-color: #cf222e;
+  color: $color-prettylights-syntax-carriage-return-text;
+  background-color: $color-prettylights-syntax-carriage-return-bg;
 }
 
 .markdown-body .pl-sr .pl-cce {
   font-weight: bold;
-  color: #116329;
+  color: $color-prettylights-syntax-string-regexp;
 }
 
 .markdown-body .pl-ml {
-  color: #3b2300;
+  color: $color-prettylights-syntax-markup-list;
 }
 
 .markdown-body .pl-mh,
 .markdown-body .pl-mh .pl-en,
 .markdown-body .pl-ms {
   font-weight: bold;
-  color: #0550ae;
+  color: $color-prettylights-syntax-markup-heading;
 }
 
 .markdown-body .pl-mi {
   font-style: italic;
-  color: #24292f;
+  color: $color-prettylights-syntax-markup-italic;
 }
 
 .markdown-body .pl-mb {
   font-weight: bold;
-  color: #24292f;
+  color: $color-prettylights-syntax-markup-bold;
 }
 
 .markdown-body .pl-md {
-  color: #82071e;
-  background-color: #ffebe9;
+  color: $color-prettylights-syntax-markup-deleted-text;
+  background-color: $color-prettylights-syntax-markup-deleted-bg;
 }
 
 .markdown-body .pl-mi1 {
-  color: #116329;
-  background-color: #dafbe1;
+  color: $color-prettylights-syntax-markup-inserted-text;
+  background-color: $color-prettylights-syntax-markup-inserted-bg;
 }
 
 .markdown-body .pl-mc {
-  color: #953800;
-  background-color: #ffd8b5;
+  color: $color-prettylights-syntax-markup-changed-text;
+  background-color: $color-prettylights-syntax-markup-changed-bg;
 }
 
 .markdown-body .pl-mi2 {
-  color: #eaeef2;
-  background-color: #0550ae;
+  color: $color-prettylights-syntax-markup-ignored-text;
+  background-color: $color-prettylights-syntax-markup-ignored-bg;
 }
 
 .markdown-body .pl-mdr {
   font-weight: bold;
-  color: #8250df;
+  color: $color-prettylights-syntax-meta-diff-range;
 }
 
 .markdown-body .pl-ba {
-  color: #57606a;
+  color: $color-prettylights-syntax-brackethighlighter-angle;
 }
 
 .markdown-body .pl-sg {
-  color: #8c959f;
+  color: $color-prettylights-syntax-sublimelinter-gutter-mark;
 }
 
 .markdown-body .pl-corl {
   text-decoration: underline;
-  color: #0a3069;
+  color: $color-prettylights-syntax-constant-other-reference-link;
 }
 
 .markdown-body [data-catalyst] {
@@ -531,7 +520,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .markdown-body .absent {
-  color: #cf222e;
+  color: $color-danger-fg;
 }
 
 .markdown-body .anchor {
@@ -579,7 +568,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .markdown-body h4 .octicon-link,
 .markdown-body h5 .octicon-link,
 .markdown-body h6 .octicon-link {
-  color: #24292f;
+  color: $color-fg-default;
   vertical-align: middle;
   visibility: hidden;
 }
@@ -680,16 +669,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .markdown-body table th,
 .markdown-body table td {
   padding: 6px 13px;
-  border: 1px solid #d0d7de;
+  border: 1px solid $color-border-default;
 }
 
 .markdown-body table tr {
-  background-color: #ffffff;
-  border-top: 1px solid hsla(210, 18%, 87%, 1);
+  background-color: $color-canvas-default;
+  border-top: 1px solid $color-border-muted;
 }
 
 .markdown-body table tr:nth-child(2n) {
-  background-color: #f6f8fa;
+  background-color: $color-canvas-subtle;
 }
 
 .markdown-body table img {
@@ -722,7 +711,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding: 7px;
   margin: 13px 0 0;
   overflow: hidden;
-  border: 1px solid #d0d7de;
+  border: 1px solid $color-border-default;
 }
 
 .markdown-body span.frame span img {
@@ -734,7 +723,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   display: block;
   padding: 5px 0 0;
   clear: both;
-  color: #24292f;
+  color: $color-fg-default;
 }
 
 .markdown-body span.align-center {
@@ -803,10 +792,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;
-  // background-color: rgba(175, 184, 193, 0.2);
-  background-color: $code-background-color;
+  border-radius: 4px;
+  // background-color: $color-neutral-muted;
   color: $code-color;
-  border-radius: 6px;
+  background-color: $code-background-color;
 }
 
 .markdown-body code br,
@@ -831,25 +820,33 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border: 0;
 }
 
-.markdown-body .highlight {
-  margin-bottom: 16px;
-}
+// .markdown-body .highlight {
+//   margin-bottom: 16px;
+// }
 
-.markdown-body .highlight pre {
-  word-break: normal;
-}
+// .markdown-body .highlight pre {
+//   margin-bottom: 0;
+//   word-break: normal;
+// }
 
-.markdown-body .highlight pre,
 .markdown-body pre {
   overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
 }
+
+// .markdown-body .highlight pre,
+// .markdown-body pre {
+//   padding: 16px;
+//   overflow: auto;
+//   font-size: 85%;
+//   line-height: 1.45;
+//   background-color: $color-canvas-subtle;
+//   border-radius: 4px;
+// }
 
 .markdown-body pre code,
 .markdown-body pre tt {
   display: inline;
-  max-width: auto;
+  // max-width: auto;
   padding: 0;
   margin: 0;
   overflow: visible;
@@ -872,7 +869,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .markdown-body .csv-data .blob-num {
   padding: 10px 8px 9px;
   text-align: right;
-  background: #ffffff;
+  background: $color-canvas-default;
   border: 0;
 }
 
@@ -882,14 +879,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .markdown-body .csv-data th {
   font-weight: 600;
-  background: #f6f8fa;
+  background: $color-canvas-subtle;
   border-top: 0;
 }
 
 .markdown-body .footnotes {
   font-size: 12px;
-  color: #57606a;
-  border-top: 1px solid #d0d7de;
+  color: $color-fg-muted;
+  border-top: 1px solid $color-border-default;
 }
 
 .markdown-body .footnotes ol {
@@ -908,12 +905,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   left: -24px;
   pointer-events: none;
   content: '';
-  border: 2px solid #0969da;
-  border-radius: 6px;
+  border: 2px solid $color-accent-emphasis;
+  border-radius: 4px;
 }
 
 .markdown-body .footnotes li:target {
-  color: #24292f;
+  color: $color-fg-default;
 }
 
 .markdown-body .footnotes .data-footnote-backref g-emoji {
@@ -941,8 +938,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .markdown-body .task-list-item-checkbox {
-  transform: scale(1.2);
-  margin: 0 0.32em 0.25em -1.6em;
+  margin: 0 0.2em 0.25em -1.6em;
   vertical-align: middle;
 }
 
