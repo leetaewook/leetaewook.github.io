@@ -1,13 +1,20 @@
+# Site settings
 title: My Blog Name
 title_seperator: '-' # "-" (default), "|", ...
+description: 'my something blog'
 locale: null # null (default), en-US, zh-CN, ...
 date_format: # "%B %-d, %Y" (default), "%Y. %m. %d", ... see https://www.shortcutfoo.com/app/dojos/ruby-date-format-strftime/cheatsheet
-siteinfo:
+og_image: # OpenGraph Image
+
+# Profile
+profile:
   name: NameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameName
   description: DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription
   avatar: /assets/images/avatar.png # TODO : baseurl에 더하기
   socials:
     github: https://github.com/leetaewook
+
+# Comments
 comments:
   provider: false # false (default), "utterances", "disqus"
   utterances:
@@ -17,6 +24,20 @@ comments:
     label: # null (default), Yout github repo issue label
   disqus:
     shortname:
+
+# SEO Related
+google_site_verification:
+bing_site_verification:
+naver_site_verification:
+yandex_site_verification:
+baidu_site_verification:
+
+# Analytics
+analytics:
+  provider: false # false (default), "google", "google-universal", "google-gtag"
+  google:
+    tracking_id:
+    anonymize_ip: # true, false (default)
 
 # Your post default values
 defaults:
@@ -66,3 +87,5 @@ kramdown:
 
 plugins:
   - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-gist

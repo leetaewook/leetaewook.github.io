@@ -7,10 +7,11 @@
 <!DOCTYPE html>
 <html {% if site.locale %}lang="{{ site.locale }}"{% endif %}>
   {% include head.html %}
+  
   <body>
     <div class="main-container{% if page.layout == 'post' %} post{% endif %}">
       <aside class="main-container__aside">
-        {% include siteinfo.html %}
+        {% include profile.html %}
         {% include tagnav.html %}
       </aside>
       <div class="content">
@@ -22,5 +23,8 @@
         {% include footer.html %}
       </div>
     </div>
+  
+    {% include analytics.html %}
+
   </body>
 </html>

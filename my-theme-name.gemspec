@@ -14,4 +14,6 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"
   spec.add_runtime_dependency "jekyll-paginate-v2", "~> 3.0"
+  spec.add_runtime_dependency "jekyll-sitemap"
+  spec.add_runtime_dependency "jekyll-gist"
 end
