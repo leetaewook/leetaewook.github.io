@@ -1,0 +1,10 @@
+.comments-container {
+  background-color: $color-card-background;
+  border-radius: 10px;
+  box-shadow: $shadow-lg;
+  padding: 16px 24px;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 16px;
+  }
+}

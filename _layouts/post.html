@@ -40,4 +40,11 @@ layout: default
   <section class="post-content markdown-body">
     {{ content }}
   </section>
+
 </article>
+
+{% if page.comments and site.comments.provider %}
+  <section class="comments-container">
+    {% include comments.html %}
+  </section>
+{% endif %}

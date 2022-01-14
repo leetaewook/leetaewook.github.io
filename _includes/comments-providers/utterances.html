@@ -1,0 +1,11 @@
+<script src="https://utteranc.es/client.js"
+        repo="{{ site.comments.utterances.repo }}"
+        issue-term="{{ site.comments.utterances.issue_term | default: 'pathname' }}"
+        theme="{{ site.comments.utterances.theme | default: 'github-light' }}"
+        crossorigin="anonymous"
+        async
+        {% if site.comments.utterances.label %}
+        label="{{ site.comments.utterances.label }}"
+        {% endif %}
+        >
+</script>

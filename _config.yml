@@ -1,14 +1,30 @@
 title: My Blog Name
-title_seperator: '-' # default is '-'
-locale: ko-KR # default is none
-date_format: # '%Y. %m. %d' #default is "%B %-d, %Y"
-permalink: /:title
+title_seperator: '-' # "-" (default), "|", ...
+locale: null # null (default), en-US, zh-CN, ...
+date_format: # "%B %-d, %Y" (default), "%Y. %m. %d", ... see https://www.shortcutfoo.com/app/dojos/ruby-date-format-strftime/cheatsheet
 siteinfo:
   name: NameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameName
   description: DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription
   avatar: /assets/images/avatar.png # TODO : baseurl에 더하기
   socials:
-    # github: https://github.com/leetaewook
+    github: https://github.com/leetaewook
+comments:
+  provider: false # false (default), "utterances", "disqus"
+  utterances:
+    repo: # "github_username/repo_name"
+    theme: # "github-light" (default), "github-dark", "preferred-color-scheme", "github-dark-orange", "icy-dark", "dark-blue", "photon-dark", "boxy-light", "gruvbox-dark"
+    issue_term: # "pathname" (default)
+    label: # null (default), Yout github repo issue label
+  disqus:
+    shortname:
+
+# Your post default values
+defaults:
+  - values:
+      layout: post
+      comments: true
+
+permalink: /:title # "/:title", ":year:month:day/:title", ... https://jekyllrb.com/docs/permalinks/
 
 pagination:
   enabled: true
@@ -32,7 +48,6 @@ autopages:
     layouts:
       - autopage_tags.html
 
-# Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
@@ -48,10 +63,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
-defaults:
-  - values:
-      layout: post
 
 plugins:
   - jekyll-paginate-v2
