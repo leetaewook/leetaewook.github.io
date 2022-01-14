@@ -1,5 +1,7 @@
 @mixin notice($notice-color) {
-  margin: 2em 0 !important; /* override*/
+  // margin: 2em 0 !important; /* override*/
+  // margin-bottom: 1em 0 !important; /* override*/
+  margin: 1em 0 !important;
   padding: 1em;
   color: $color-fg-default;
   // font-family: $global-font-family;
@@ -18,7 +20,7 @@
   @at-root .page__content #{&} h4 {
     /* using at-root to override .page-content h4 font size*/
     margin-bottom: 0;
-    font-size: 1em;
+    font-size: $font-size-4;
   }
 
   p {
@@ -34,6 +36,9 @@
   }
 
   a {
+    text-decoration: underline;
+    transition: 0.2s;
+
     color: mix(#000, $notice-color, 10%);
 
     &:hover {

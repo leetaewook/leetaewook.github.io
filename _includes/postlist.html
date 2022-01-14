@@ -4,9 +4,9 @@
   {% for post in paginator.posts %}
 
     {% if post.description %}
-      {% assign description = post.description | strip_html | truncatewords: 48 %}
+      {% assign description = post.description | markdownify | strip_html | truncatewords: 48 %}
     {% else %}
-      {% assign description = post.content | strip_html | truncatewords: 48 %}
+      {% assign description = post.content | markdownify | strip_html | truncatewords: 48 %}
     {% endif %}
 
     <article class="post">
@@ -24,7 +24,7 @@
               {% endfor %}
             </ul>
           {% endif %}
-          <h1 class="post-title">{{ post.title | strip_html | truncatewords: 32 }}</h1>
+          <h1 class="post-title">{{ post.title | markdownify | strip_html | truncatewords: 32 }}</h1>
           <h2 class="post-description">{{ description }}</h2>
           <div class="post-time">
             <i class="ri-calendar-line"></i>

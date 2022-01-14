@@ -6,9 +6,22 @@ $sans-serif: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica
   sans-serif !default;
 $monospace: Monaco, Consolas, 'Lucida Console', monospace !default;
 
+$font-size-1: 1.75em;
+$font-size-2: 1.5em;
+$font-size-3: 1.25em;
+$font-size-4: 1em;
+$font-size-5: 0.875em;
+$font-size-6: 0.85em;
+$font-size-7: 0.75em;
+
 /*
    Colors
    ========================================================================== */
+$gray: #7a8288 !default;
+$dark-gray: mix(#000, $gray, 50%) !default;
+$darker-gray: mix(#000, $gray, 60%) !default;
+$light-gray: mix(#fff, $gray, 50%) !default;
+$lighter-gray: mix(#fff, $gray, 90%) !default;
 
 $body_text_color: #6e7173 !default;
 $body_accent_text_color: #3d4144 !default;
@@ -67,19 +80,31 @@ $color-accent-emphasis: #0969da;
 $color-attention-subtle: #fff8c5;
 $color-danger-fg: #cf222e;
 
-/* notices */
-$color-notice-default: mix(#fff, #7a8288, 50%);
+$form-background-color: $lighter-gray;
+
+/* notices and buttons */
+$color-notice-default: $light-gray;
 $color-notice-primary: #6f777d !default;
 $color-notice-info: #3b9cba !default;
 $color-notice-success: #3fa63f !default;
 $color-notice-warning: #d67f05 !default;
 $color-notice-danger: #ee5f5b !default;
+$color-info: #3b9cba !default;
+$color-facebook: #3b5998 !default;
+$color-twitter: #55acee !default;
+$color-linkedin: #007bb6 !default;
+
 $notice-background-mix: 80% !default;
 $code-notice-background-mix: 90% !default;
 
 /* code */
 $code-background-color: #f9f2f4;
 $code-color: #c7254e;
+
+// /* blockquote */
+// $color-blockquote-border:
+// $color-blockquote-background:
+// $color-blockquote-text:
 
 /* codeblock syntax highlight */
 $base00: #263238;
@@ -99,6 +124,12 @@ $base0d: #82aaff;
 $base0e: #c792ea;
 $base0f: #ff5370;
 
+/* YIQ color contrast */
+$yiq-contrasted-dark-default: $dark-gray !default;
+$yiq-contrasted-light-default: #fff !default;
+$yiq-contrasted-threshold: 175 !default;
+$yiq-debug: false !default;
+
 /*
    Breakpoints
    ========================================================================== */
@@ -109,6 +140,7 @@ $mobile-breakpoint: 468px;
 /*
    Box-Shadows
    ========================================================================== */
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 $shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1) !default;
 $shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1) !default;
 $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !default;

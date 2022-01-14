@@ -25,11 +25,11 @@ layout: default
     {% endif %}
     
     {% if page.title %}
-      <h1 class="post-title">{{ page.title }}</h1>
+      <h1 class="post-title">{{ page.title | markdownify | strip_html }}</h1>
     {% endif %}
 
     {% if page.description %}
-      <h2 class="post-description">{{ page.description }}</h2>
+      <h2 class="post-description">{{ page.description | markdownify | strip_html }}</h2>
     {% endif %}
 
     {% if page.date %}
