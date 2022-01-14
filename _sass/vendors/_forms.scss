@@ -56,7 +56,6 @@
   select,
   textarea {
     box-sizing: border-box;
-    font-family: $sans-serif;
   }
 
   label {
@@ -84,7 +83,7 @@
     padding: 0.25em;
     margin-bottom: 0.5em;
     color: $color-fg-default;
-    background-color: $card_background;
+    background-color: $color-card-background;
     border: $color-border-default;
     border-radius: 4px;
     box-shadow: $shadow-sm;

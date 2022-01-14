@@ -1,13 +1,10 @@
 @mixin notice($notice-color) {
-  // margin: 2em 0 !important; /* override*/
-  // margin-bottom: 1em 0 !important; /* override*/
-  margin: 1em 0 !important;
+  margin: 1rem 0 !important;
   padding: 1em;
   color: $color-fg-default;
-  // font-family: $global-font-family;
   font-size: 0.85em !important;
   text-indent: initial; /* override*/
-  background-color: mix($card_background, $notice-color, $notice-background-mix);
+  background-color: mix($color-card-background, $notice-color, $notice-background-mix);
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba($notice-color, 0.25);
 
@@ -48,7 +45,7 @@
 
   code {
     color: inherit;
-    background-color: mix($card_background, $notice-color, $code-notice-background-mix);
+    background-color: mix($color-card-background, $notice-color, $code-notice-background-mix);
   }
 
   pre code {

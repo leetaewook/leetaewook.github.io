@@ -35,13 +35,13 @@
   &__name {
     font-size: 0.9rem;
     font-weight: 600;
-    color: $body_accent_text_color;
+    color: $color-body-accent-text;
   }
 
   &__description {
     font-size: 0.8rem;
     font-weight: 400;
-    color: $body_text_color;
+    color: $color-body-text;
     margin: 8px 0;
   }
 

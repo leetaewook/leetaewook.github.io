@@ -4,7 +4,7 @@
     margin-bottom: 16px;
     border-radius: 10px;
     overflow: hidden;
-    background-color: $card_background;
+    background-color: $color-card-background;
     box-shadow: $shadow-md;
     transition: box-shadow 0.2s, transform 0.2s;
 
@@ -39,29 +39,29 @@
       font-weight: 400;
       padding: 6px 12px;
       border-radius: 6px;
-      color: $card_tag_text_color;
-      background-color: $card_tag_background;
+      color: $color-card-tag-text;
+      background-color: $color-card-tag-background;
       box-shadow: $shadow;
       margin-right: 8px;
       margin-bottom: 6px;
     }
 
     &-title {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 600;
-      color: $card_accent_text_color;
+      color: $color-card-accent-text;
       margin-bottom: 12px;
     }
 
     &-description {
       font-size: 0.9rem;
       font-weight: 400;
-      color: $card_text_color;
+      color: $color-card-text;
       margin-bottom: 14px;
     }
 
     &-time {
-      color: $card_sub_text_color;
+      color: $color-card-sub-text;
       font-weight: 400;
       font-size: 0.8rem;
       display: flex;

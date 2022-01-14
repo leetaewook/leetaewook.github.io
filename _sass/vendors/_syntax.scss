@@ -9,7 +9,7 @@
     margin-bottom: 1rem;
     background: $base00;
     color: $base05;
-    font-family: $monospace;
+    font-family: $font-codeblock;
     font-size: 0.82em;
     line-height: 1.8;
     border-radius: 4px;
@@ -20,17 +20,6 @@
       padding: 1em;
     }
   }
-
-  // .markdown-body table th,
-  // .markdown-body table td {
-  //   padding: 6px 13px;
-  //   border: 1px solid $color-border-default;
-  // }
-
-  // .markdown-body table tr {
-  //   background-color: $color-canvas-default;
-  //   border-top: 1px solid $color-border-muted;
-  // }
 
   .highlight table {
     margin-bottom: 0;

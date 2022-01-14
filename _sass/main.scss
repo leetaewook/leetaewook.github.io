@@ -16,6 +16,8 @@
 @import 'pages/deafult';
 @import 'pages/post';
 
+@import 'custom';
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -35,8 +37,9 @@ html {
 }
 
 body {
+  font-family: $font-main;
   min-width: 360px;
-  background-color: $body_background;
+  background-color: $color-body-background;
 }
 
 .main-container {

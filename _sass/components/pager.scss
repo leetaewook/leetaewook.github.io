@@ -1,7 +1,7 @@
 .pager {
   width: 100%;
   display: flex;
-  background-color: $card_background;
+  background-color: $color-card-background;
   box-shadow: $shadow-md;
   border-radius: 10px;
   overflow: hidden;
@@ -11,17 +11,17 @@
   &__item {
     flex: 1 1 0;
     max-width: 20%;
-    color: $card_text_color;
+    color: $color-card-text;
     text-align: center;
     transition: background-color 0.2s;
 
     &:not(.disabled):hover {
-      background-color: $card_background_selected;
+      background-color: $color-selected-card-background;
     }
 
     &.selected {
-      color: $card_accent_text_color;
-      background-color: $card_background_selected;
+      color: $color-card-accent-text;
+      background-color: $color-selected-card-background;
     }
 
     &.disabled {

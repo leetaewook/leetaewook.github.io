@@ -1,18 +1,17 @@
 /*
    Typography
    ========================================================================== */
-$serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial,
+$font-main: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial,
   sans-serif !default;
-$monospace: Monaco, Consolas, 'Lucida Console', monospace !default;
+$font-codeblock: Monaco, Consolas, 'Lucida Console', monospace !default;
 
-$font-size-1: 1.75em;
-$font-size-2: 1.5em;
-$font-size-3: 1.25em;
-$font-size-4: 1em;
-$font-size-5: 0.875em;
-$font-size-6: 0.85em;
-$font-size-7: 0.75em;
+$font-size-1: 1.75em !default;
+$font-size-2: 1.5em !default;
+$font-size-3: 1.25em !default;
+$font-size-4: 1em !default;
+$font-size-5: 0.875em !default;
+$font-size-6: 0.85em !default;
+$font-size-7: 0.75em !default;
 
 /*
    Colors
@@ -23,67 +22,66 @@ $darker-gray: mix(#000, $gray, 60%) !default;
 $light-gray: mix(#fff, $gray, 50%) !default;
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 
-$body_text_color: #6e7173 !default;
-$body_accent_text_color: #3d4144 !default;
-$body_background: #f5f5fa !default;
-$body_tag_background: #fff !default;
+$color-body-text: #6e7173 !default;
+$color-body-accent-text: #3d4144 !default;
+$color-body-background: #f5f5fa !default;
+$color-body-tag-text: #3d4144 !default;
+$color-body-tag-background: #fff !default;
 
-$card_text_color: #3d4144 !default;
-$card_sub_text_color: #bababa !default;
-$card_accent_text_color: #000 !default;
-$card_background: #fff !default;
-$card_background_selected: #eaeaea !default;
-$card_tag_text_color: #fff !default;
-$card_tag_background: #2c3e50 !default;
+$color-card-text: #3d4144 !default;
+$color-card-sub-text: #bababa !default;
+$color-card-accent-text: #000 !default;
+$color-card-background: #fff !default;
+$color-selected-card-background: #eaeaea !default;
+$color-card-tag-text: #fff !default;
+$color-card-tag-background: #2c3e50 !default;
 
-/* markdown colors */
-$color-prettylights-syntax-comment: #6e7781;
-$color-prettylights-syntax-constant: #0550ae;
-$color-prettylights-syntax-entity: #8250df;
-$color-prettylights-syntax-storage-modifier-import: #24292f;
-$color-prettylights-syntax-entity-tag: #116329;
-$color-prettylights-syntax-keyword: #cf222e;
-$color-prettylights-syntax-string: #0a3069;
-$color-prettylights-syntax-variable: #953800;
-$color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
-$color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
-$color-prettylights-syntax-invalid-illegal-bg: #82071e;
-$color-prettylights-syntax-carriage-return-text: #f6f8fa;
-$color-prettylights-syntax-carriage-return-bg: #cf222e;
-$color-prettylights-syntax-string-regexp: #116329;
-$color-prettylights-syntax-markup-list: #3b2300;
-$color-prettylights-syntax-markup-heading: #0550ae;
-$color-prettylights-syntax-markup-italic: #24292f;
-$color-prettylights-syntax-markup-bold: #24292f;
-$color-prettylights-syntax-markup-deleted-text: #82071e;
-$color-prettylights-syntax-markup-deleted-bg: #ffebe9;
-$color-prettylights-syntax-markup-inserted-text: #116329;
-$color-prettylights-syntax-markup-inserted-bg: #dafbe1;
-$color-prettylights-syntax-markup-changed-text: #953800;
-$color-prettylights-syntax-markup-changed-bg: #ffd8b5;
-$color-prettylights-syntax-markup-ignored-text: #eaeef2;
-$color-prettylights-syntax-markup-ignored-bg: #0550ae;
-$color-prettylights-syntax-meta-diff-range: #8250df;
-$color-prettylights-syntax-brackethighlighter-angle: #57606a;
-$color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
-$color-prettylights-syntax-constant-other-reference-link: #0a3069;
-$color-fg-default: #24292f;
-$color-fg-muted: #57606a;
-$color-fg-subtle: #6e7781;
-$color-canvas-default: #ffffff;
-$color-canvas-subtle: #f6f8fa;
-$color-border-default: #d0d7de;
-$color-border-muted: hsla(210, 18%, 87%, 1);
-$color-neutral-muted: rgba(175, 184, 193, 0.2);
-$color-accent-fg: #0969da;
-$color-accent-emphasis: #0969da;
-$color-attention-subtle: #fff8c5;
-$color-danger-fg: #cf222e;
+/* Github-markdown-css colors */
+$color-prettylights-syntax-comment: #6e7781 !default;
+$color-prettylights-syntax-constant: #0550ae !default;
+$color-prettylights-syntax-entity: #8250df !default;
+$color-prettylights-syntax-storage-modifier-import: #24292f !default;
+$color-prettylights-syntax-entity-tag: #116329 !default;
+$color-prettylights-syntax-keyword: #cf222e !default;
+$color-prettylights-syntax-string: #0a3069 !default;
+$color-prettylights-syntax-variable: #953800 !default;
+$color-prettylights-syntax-brackethighlighter-unmatched: #82071e !default;
+$color-prettylights-syntax-invalid-illegal-text: #f6f8fa !default;
+$color-prettylights-syntax-invalid-illegal-bg: #82071e !default;
+$color-prettylights-syntax-carriage-return-text: #f6f8fa !default;
+$color-prettylights-syntax-carriage-return-bg: #cf222e !default;
+$color-prettylights-syntax-string-regexp: #116329 !default;
+$color-prettylights-syntax-markup-list: #3b2300 !default;
+$color-prettylights-syntax-markup-heading: #0550ae !default;
+$color-prettylights-syntax-markup-italic: #24292f !default;
+$color-prettylights-syntax-markup-bold: #24292f !default;
+$color-prettylights-syntax-markup-deleted-text: #82071e !default;
+$color-prettylights-syntax-markup-deleted-bg: #ffebe9 !default;
+$color-prettylights-syntax-markup-inserted-text: #116329 !default;
+$color-prettylights-syntax-markup-inserted-bg: #dafbe1 !default;
+$color-prettylights-syntax-markup-changed-text: #953800 !default;
+$color-prettylights-syntax-markup-changed-bg: #ffd8b5 !default;
+$color-prettylights-syntax-markup-ignored-text: #eaeef2 !default;
+$color-prettylights-syntax-markup-ignored-bg: #0550ae !default;
+$color-prettylights-syntax-meta-diff-range: #8250df !default;
+$color-prettylights-syntax-brackethighlighter-angle: #57606a !default;
+$color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f !default;
+$color-prettylights-syntax-constant-other-reference-link: #0a3069 !default;
+$color-fg-default: #24292f !default;
+$color-fg-muted: #57606a !default;
+$color-fg-subtle: #6e7781 !default;
+$color-canvas-default: #ffffff !default;
+$color-canvas-subtle: #f6f8fa !default;
+$color-border-default: #d0d7de !default;
+$color-border-muted: hsla(210, 18%, 87%, 1) !default;
+$color-neutral-muted: rgba(175, 184, 193, 0.2) !default;
+$color-accent-fg: #0969da !default;
+$color-accent-emphasis: #0969da !default;
+$color-attention-subtle: #fff8c5 !default;
+$color-danger-fg: #cf222e !default;
 
-$form-background-color: $lighter-gray;
-
-/* notices and buttons */
-$color-notice-default: $light-gray;
+/* Notices and buttons */
+$color-notice-default: $light-gray !default;
 $color-notice-primary: #6f777d !default;
 $color-notice-info: #3b9cba !default;
 $color-notice-success: #3fa63f !default;
@@ -93,36 +91,33 @@ $color-info: #3b9cba !default;
 $color-facebook: #3b5998 !default;
 $color-twitter: #55acee !default;
 $color-linkedin: #007bb6 !default;
-
 $notice-background-mix: 80% !default;
 $code-notice-background-mix: 90% !default;
 
-/* code */
-$code-background-color: #f9f2f4;
-$code-color: #c7254e;
+/* Form */
+$form-background-color: $lighter-gray !default;
 
-// /* blockquote */
-// $color-blockquote-border:
-// $color-blockquote-background:
-// $color-blockquote-text:
+/* Code */
+$code-background-color: #f9f2f4 !default;
+$code-color: #c7254e !default;
 
-/* codeblock syntax highlight */
-$base00: #263238;
-$base01: #2e3c43;
-$base02: #314549;
-$base03: #546e7a;
-$base04: #b2ccd6;
-$base05: #eeffff;
-$base06: #eeffff;
-$base07: #ffffff;
-$base08: #f07178;
-$base09: #f78c6c;
-$base0a: #ffcb6b;
-$base0b: #c3e88d;
-$base0c: #89ddff;
-$base0d: #82aaff;
-$base0e: #c792ea;
-$base0f: #ff5370;
+/* Codeblock syntax highlight */
+$base00: #263238 !default;
+$base01: #2e3c43 !default;
+$base02: #314549 !default;
+$base03: #546e7a !default;
+$base04: #b2ccd6 !default;
+$base05: #eeffff !default;
+$base06: #eeffff !default;
+$base07: #ffffff !default;
+$base08: #f07178 !default;
+$base09: #f78c6c !default;
+$base0a: #ffcb6b !default;
+$base0b: #c3e88d !default;
+$base0c: #89ddff !default;
+$base0d: #82aaff !default;
+$base0e: #c792ea !default;
+$base0f: #ff5370 !default;
 
 /* YIQ color contrast */
 $yiq-contrasted-dark-default: $dark-gray !default;
@@ -131,19 +126,19 @@ $yiq-contrasted-threshold: 175 !default;
 $yiq-debug: false !default;
 
 /*
-   Breakpoints
+   Box shadows
    ========================================================================== */
-$desktop-breakpoint: 1020px;
-$tablet-breakpoint: 768px;
-$mobile-breakpoint: 468px;
-
-/*
-   Box-Shadows
-   ========================================================================== */
-$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !default;
 $shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1) !default;
 $shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1) !default;
 $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !default;
 $shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !default;
 $shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !default;
 $shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05) !default;
+
+/*
+   Breakpoints
+   ========================================================================== */
+$desktop-breakpoint: 1020px;
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 468px;

@@ -7,7 +7,7 @@
     display: flex;
     font-weight: 600;
     align-items: flex-end;
-    color: $body_accent_text_color;
+    color: $color-body-accent-text;
     margin-bottom: 8px;
 
     i {
@@ -27,8 +27,8 @@
 
   &__item {
     font-size: 0.68rem;
-    color: $body_accent_text_color;
-    background: $body_tag_background;
+    color: $color-body-tag-text;
+    background: $color-body-tag-background;
     padding: 8px 20px;
     margin-bottom: 8px;
     margin-right: 4px;
