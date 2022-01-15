@@ -1,12 +1,12 @@
 <header class="profile">
   <figure class="profile__avatar">
     {% if site.profile.avatar %}
-      <a href="/"><img src="{{ site.profile.avatar }}" loading="lazy" {% if site.title %}alt="{{ site.title }}"{% endif %} /></a>
+      <a href="{{ '/' | relative_url }}"><img src="{{ site.profile.avatar | relative_url }}" loading="lazy" {% if site.title %}alt="{{ site.title }}"{% endif %} /></a>
     {% endif %}
   </figure>
   <div>
     <div>
-      <a href="/">
+      <a href="{{ '/' | relative_url }}">
         <h1 class="profile__name">{{ site.profile.name }}</h1>
         <h2 class="profile__description">{{ site.profile.description }}</h2>
       </a>

@@ -11,7 +11,7 @@ footer_copyright: '&copy; 2022 Example Site'
 profile:
   name: NameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameName
   description: DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription
-  avatar: /assets/images/avatar.png # TODO : baseurl에 더하기
+  avatar: /assets/images/avatar.png
   socials:
     github:
     twitter:
@@ -51,7 +51,7 @@ defaults:
       comments: true
 
 permalink: /:title # "/:title", ":year:month:day/:title", ... https://jekyllrb.com/docs/permalinks/
-baseurl: # TODO
+baseurl:
 
 pagination:
   enabled: true
