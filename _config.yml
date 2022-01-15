@@ -1,30 +1,30 @@
 # Site settings
-title: 'Jeykll theme Twail'
-description: 'Card style Jekyll theme for blog'
+title: '이태욱의 개발 블로그'
+description: '만들고 싶은 게 많은 개발자 이태욱의 개발 블로그입니다.'
 title_seperator: '-' # "-" (default), "|", ...
-locale: null # null (default), en-US, zh-CN, ...
+locale: 'ko-KR' # null (default), en-US, zh-CN, ...
 date_format: # "%B %-d, %Y" (default), "%Y. %m. %d", ... https://www.shortcutfoo.com/app/dojos/ruby-date-format-strftime/cheatsheet
-footer_copyright: '&copy; 2022~ Twail demo site'
-og_image: 'assets/images/jekyll-theme-twail.png' # Default OpenGraph Image
-baseurl: '/jekyll-theme-twail' # TODO: If your Github Pages URL is https://usename.github.io/SOMETHING/, baseurl should be set to "/SOMETHING"
+footer_copyright: '&copy; 2022~ leetaewook'
+og_image: # Default OpenGraph Image
+baseurl: '/' # If your Github Pages URL is https://usename.github.io/SOMETHING/, baseurl should be set to "/SOMETHING"
 
 # Profile
 profile:
-  name: 'Twail'
-  description: 'Card style Jekyll theme for blog'
+  name: 'leetaewook'
+  description: '만들고 싶은 게 많은 개발자입니다.'
   avatar: 'assets/images/avatar.png'
   socials:
-    github: 'https://github.com/leetaewook/jekyll-theme-twail'
-    twitter: 'https://twitter.com/'
-    facebook: 'https://facebook.com/'
-    instagram: 'https://instagram.com/'
-    youtube: 'https://youtube.com/'
+    github: 'https://github.com/leetaewook'
+    twitter: # 'https://twitter.com/'
+    facebook: # 'https://facebook.com/'
+    instagram: # 'https://instagram.com/'
+    youtube: # 'https://youtube.com/'
 
 # Comments
 comments:
-  provider: false # false (default), "utterances", "disqus"
+  provider: 'utterances' # false (default), "utterances", "disqus"
   utterances:
-    repo: # "github_username/repo_name"
+    repo: 'leetaewook/leetaewook.github.io' # "github_username/repo_name"
     theme: # "github-light" (default), "github-dark", "preferred-color-scheme", "github-dark-orange", "icy-dark", "dark-blue", "photon-dark", "boxy-light", "gruvbox-dark"
     issue_term: # "pathname" (default)
     label: # null (default), Yout github repo issue label

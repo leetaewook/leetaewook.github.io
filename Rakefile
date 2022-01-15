@@ -3,8 +3,8 @@ require "tmpdir"
 require "bundler/setup"
 require "jekyll"
 
-# TODO: Write your Github Repository name
-GITHUB_REPONAME = "leetaewook/jekyll-theme-twail"
+# Write your Github Repository name
+GITHUB_REPONAME = "leetaewook/leetaewook.github.io"
 
 desc "Generate blog files"
 task :generate do
