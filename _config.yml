@@ -40,10 +40,10 @@ baidu_site_verification:
 
 # Analytics
 analytics:
-  provider: false # false (default), "google", "google-universal", "google-gtag"
+  provider: 'google-gtag' # false (default), "google", "google-universal", "google-gtag"
   google:
-    tracking_id:
-    anonymize_ip: # true, false (default)
+    tracking_id: 'G-PK913LCVZT'
+    anonymize_ip: false # true, false (default)
 
 # Your post default values
 defaults:
