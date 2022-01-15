@@ -7,6 +7,7 @@ date_format: # "%B %-d, %Y" (default), "%Y. %m. %d", ... https://www.shortcutfoo
 footer_copyright: '&copy; 2022~ leetaewook'
 og_image: # Default OpenGraph Image
 baseurl: '/' # If your Github Pages URL is https://usename.github.io/SOMETHING/, baseurl should be set to "/SOMETHING"
+timezone: Asia/Seoul # Asia/Seoul # America/New_York, ..., https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Profile
 profile:
