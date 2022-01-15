@@ -1,7 +1,7 @@
 .profile {
   display: flex;
   flex-direction: column;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 
   @media screen and (max-width: $desktop-breakpoint) {
     flex-direction: row;
@@ -48,13 +48,14 @@
   &__socials {
     list-style: none;
     display: flex;
+    color: $color-body-text;
 
     li {
-      margin-right: 6px;
-      transition: opacity 0.2s;
+      margin-right: 8px;
+      transition: 0.2s;
 
       &:hover {
-        opacity: 0.6;
+        filter: brightness(0);
       }
 
       a {

@@ -39,7 +39,7 @@
 .markdown-body figure figcaption {
   margin-bottom: 1em;
   font-size: $font-size-6;
-  color: $color-card-sub-text;
+  color: $color-fg-subtle;
 }
 
 .markdown-body summary {
@@ -249,7 +249,7 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
   line-height: 1.25;

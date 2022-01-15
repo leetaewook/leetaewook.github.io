@@ -1,3 +1,6 @@
 <footer class="footer">
-  <section class="copyright">&copy; 2022 Example Site</section>
+  {% if site.footer_copyright %}
+    <section class="copyright">{{ site.footer_copyright }}</section>
+  {% endif %}
+  <section class="powerby">Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/leetaewook/jekyll-theme-twile">Twile theme</a></section>
 </footer>

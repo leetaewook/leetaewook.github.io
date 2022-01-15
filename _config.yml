@@ -1,10 +1,11 @@
 # Site settings
 title: My Blog Name
-title_seperator: '-' # "-" (default), "|", ...
 description: 'my something blog'
+title_seperator: '-' # "-" (default), "|", ...
 locale: null # null (default), en-US, zh-CN, ...
-date_format: # "%B %-d, %Y" (default), "%Y. %m. %d", ... see https://www.shortcutfoo.com/app/dojos/ruby-date-format-strftime/cheatsheet
-og_image: # OpenGraph Image
+date_format: # "%B %-d, %Y" (default), "%Y. %m. %d", ... https://www.shortcutfoo.com/app/dojos/ruby-date-format-strftime/cheatsheet
+og_image: # Default OpenGraph Image
+footer_copyright: '&copy; 2022 Example Site'
 
 # Profile
 profile:
@@ -12,7 +13,11 @@ profile:
   description: DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription
   avatar: /assets/images/avatar.png # TODO : baseurl에 더하기
   socials:
-    github: https://github.com/leetaewook
+    github:
+    twitter:
+    facebook:
+    instagram:
+    youtube:
 
 # Comments
 comments:
@@ -46,6 +51,7 @@ defaults:
       comments: true
 
 permalink: /:title # "/:title", ":year:month:day/:title", ... https://jekyllrb.com/docs/permalinks/
+baseurl: # TODO
 
 pagination:
   enabled: true
