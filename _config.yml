@@ -1,23 +1,24 @@
 # Site settings
-title: My Blog Name
-description: 'my something blog'
+title: 'Jeykll theme Twail'
+description: 'Card style Jekyll theme for blog'
 title_seperator: '-' # "-" (default), "|", ...
 locale: null # null (default), en-US, zh-CN, ...
 date_format: # "%B %-d, %Y" (default), "%Y. %m. %d", ... https://www.shortcutfoo.com/app/dojos/ruby-date-format-strftime/cheatsheet
-og_image: # Default OpenGraph Image
-footer_copyright: '&copy; 2022 Example Site'
+footer_copyright: '&copy; 2022~ Twail demo site'
+og_image: 'assets/images/jekyll-theme-twail.png' # Default OpenGraph Image
+baseurl: '/jekyll-theme-twail' # TODO: If your Github Pages URL is https://usename.github.io/SOMETHING/, baseurl should be set to "/SOMETHING"
 
 # Profile
 profile:
-  name: NameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameNameName
-  description: DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription
-  avatar: /assets/images/avatar.png
+  name: 'Twail'
+  description: 'Card style Jekyll theme for blog'
+  avatar: 'assets/images/avatar.png'
   socials:
-    github:
-    twitter:
-    facebook:
-    instagram:
-    youtube:
+    github: 'https://github.com/leetaewook/jekyll-theme-twail'
+    twitter: 'https://twitter.com/'
+    facebook: 'https://facebook.com/'
+    instagram: 'https://instagram.com/'
+    youtube: 'https://youtube.com/'
 
 # Comments
 comments:
@@ -51,11 +52,11 @@ defaults:
       comments: true
 
 permalink: /:title # "/:title", ":year:month:day/:title", ... https://jekyllrb.com/docs/permalinks/
-baseurl:
 
+# Pagination
 pagination:
   enabled: true
-  per_page: 4
+  per_page: 4 # Posts per page
   permalink: '/page:num/'
   limit: 0
   sort_field: 'date'

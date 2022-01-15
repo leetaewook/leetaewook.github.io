@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "my-theme-name"
-  spec.version       = "0.1.0"
+  spec.name          = "jekyll-theme-twail"
+  spec.version       = "1.0.0"
   spec.authors       = ["leetaewook"]
   spec.email         = ["twleev@gmail.com"]
 
-  spec.summary       = "My new Jekyll theme!"
-  spec.homepage      = "https://github.com/leetaewook/leetaewook.github.io"
+  spec.summary       = "Card style Jekyll theme for blog"
+  spec.homepage      = "https://github.com/leetaewook/jekyll-theme-twail"
   spec.license       = "MIT"
+
+  spec.metadata["plugin_type"] = "theme"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
 

@@ -7,7 +7,7 @@ layout: default
 <article class="post-container">
   {% if page.cover %}
     <section class="post-cover">
-      <a href="{{ page.url }}"><img src="{{ page.cover }}"></a>
+      <a href="{{ page.url | relative_url }}"><img src="{{ page.cover | relative_url }}"></a>
     </section>
   {% endif %}
     
