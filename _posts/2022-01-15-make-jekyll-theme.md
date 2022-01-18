@@ -358,7 +358,7 @@ defaults:
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ title | default: site.title }}</title>
-	<link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
 </head>{% endraw %}
 ```
 
@@ -369,8 +369,8 @@ defaults:
 <html {% if site.locale %}lang={{ site.locale }}{% endif %}>
   {% include head.html %}
   <body>
-		<!-- 생략 -->
-	</body>
+    <!-- 생략 -->
+  </body>
 </html>{% endraw %}
 ```
 
