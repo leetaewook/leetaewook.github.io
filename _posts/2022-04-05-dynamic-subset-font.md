@@ -1,5 +1,5 @@
 ---
-title: 웹에서 커스텀 폰트를 Google Fonts처럼 다이나믹 서브셋 폰트 만들어 사용하기
+title: Google Fonts처럼 다이나믹 서브셋 폰트 만들어 사용하기
 description: 다이나믹 서브셋은 CSS의 unicode-range 속성을 이용하여 해당 유니코드 영역의 문자가 사용될 때 폰트를 다운로드 하는 방식을 말합니다.
 tags: [frontend]
 cover: '/images/dynamic-subset-font/cover.png'
