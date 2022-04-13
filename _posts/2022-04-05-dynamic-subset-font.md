@@ -134,7 +134,7 @@ node main.js
 <figure class="align-center">
    <img src="/images/dynamic-subset-font/2.png">
 </figure>
-페이지에서 실제 사용되는 글자만을 다운로드하는 모습으로, 다이나믹 서브셋 폰트가 잘 적용되고 있습니다.
+페이지에서 실제 사용되는 글자가 담긴 폰트 파일만을 다운로드하는 모습으로, 다이나믹 서브셋 폰트가 잘 적용되고 있습니다.
 
 ## 마치며
 이렇게 만든 폰트와 CSS 파일은 CDN에 업로드 해두고 이용하면 편리합니다.
