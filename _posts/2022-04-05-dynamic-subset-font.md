@@ -59,6 +59,7 @@ Google Fonts의 unicode-range를 참조하여 폰트 파일을 쪼개야합니�
 
 단순 노가다로 폰트를 나누는 대신, [black7375님이 만든 font-range 라이브러리](https://github.com/black7375/font-range)를 이용합니다.
 ```bash
+# font-range 라이브러리 설치
 npm init -y
 npm i font-range
 pip install fonttools zopfli brotli # font-range의 dependencies
@@ -66,7 +67,6 @@ pip install fonttools zopfli brotli # font-range의 dependencies
 
 ```jsx
 // main.js
-
 import { fontRange } from 'font-range';
 
 fontRange(
@@ -79,7 +79,7 @@ fontRange(
 );
 ```
 
-```jsx
+```bash
 node main.js
 ```
 
@@ -90,6 +90,8 @@ node main.js
 
 같이 생성된 CSS 파일의 font-familly, font-style, font-weight, src를 폰트에 알맞게 수정합니다.
 ```css
+/* 최종적으로 생성된 다이나믹 서브셋 폰트 CSS */
+
 /* [0] */
 @font-face {
   font-family: 'Gmarket Sans';
