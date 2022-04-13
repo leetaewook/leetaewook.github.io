@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html lang="ko-KR">
+  
+
+
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Obsidian을 통해 Notion, Typora 대체하기 - 이태욱의 개발 블로그</title>
+
+<meta name="description" content="옵시디안은 강력한 마크다운 문서 관리 툴입니다. Git이나 클라우드 서비스와 함께 이용하여 Notion과 같은 노트앱으로 활용할 수 있습니다.">
+
+
+  <meta name="keywords" content="tool">
+
+
+
+
+<meta property="og:title" content="Obsidian을 통해 Notion, Typora 대체하기 - 이태욱의 개발 블로그">
+<meta property="og:description" content="옵시디안은 강력한 마크다운 문서 관리 툴입니다. Git이나 클라우드 서비스와 함께 이용하여 Notion과 같은 노트앱으로 활용할 수 있습니다.">
+<meta property="og:site_name" content="이태욱의 개발 블로그">
+<meta property="og:url" content="/obsidian">
+<meta property="og:type" content="article">
+
+
+<meta property="og:locale" content="ko_KR">
+
+
+
+  <meta property="og:image" content="/images/obsidian/obsidian-banner.png">
+
+
+
+  <meta property="article:published_time" content="2022-01-19T00:00:00+09:00">
+
+
+
+
+<link rel="canonical" href="/obsidian">
+
+
+
+
+
+  <meta name="google-site-verification" content="aVbO_HoQKonY1H5ajJ_lFbk9hiX2wrAiza8akt4g5O4" />
+
+
+
+
+
+  <meta name="naver-site-verification" content="1452174d19394af19e88280d09dfc03172ab3ee8">
+
+
+
+
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+  
+  <body>
+    <div class="main-container post">
+      <aside class="main-container__aside">
+        <header class="profile">
+  <figure class="profile__avatar">
+    
+      <a href="/"><img src="/assets/images/avatar.png" loading="lazy" alt="이태욱의 개발 블로그" /></a>
+    
+  </figure>
+  <div>
+    <div>
+      <a href="/">
+        <h1 class="profile__name">leetaewook</h1>
+        <h2 class="profile__description">만들고 싶은 게 많은 개발자입니다.</h2>
+      </a>
+    </div>
+    <ul class="profile__socials">
+      
+        <li><a href="https://github.com/leetaewook" target="_blank"><i class="ri-github-fill"></i></a></li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</header>
+        <section class="tagnav">
+  <h2 class="tagnav__title"><i class="ri-price-tag-3-line"></i><span>TAGS</span></h2>
+  <nav class="tagnav__wrapper">
+    
+    
+    
+    
+    
+    
+      <a class="tagnav__item" href="/tag/jekyll/index.html">jekyll</a>
+    
+    
+    
+      <a class="tagnav__item" href="/tag/tool/index.html">tool</a>
+    
+    
+    
+      <a class="tagnav__item" href="/tag/frontend/index.html">frontend</a>
+    
+    
+    
+    
+    
+  
+  </nav>
+</section>
+      </aside>
+      <div class="content">
+        
+        <main>
+
+<article class="post-container">
+  
+    <section class="post-cover">
+      <a href="/obsidian"><img src="/images/obsidian/obsidian-banner.png"></a>
+    </section>
+  
+    
+  <header class="post-summary">
+      
+      <ul class="post-tags">
+        
+          <li><h4 class="post-tag">tool</h4></li>
+        
+      </ul>
+    
+    
+    
+      <h1 class="post-title">Obsidian을 통해 Notion, Typora 대체하기
+</h1>
+    
+
+    
+      <h2 class="post-description">옵시디안은 강력한 마크다운 문서 관리 툴입니다. Git이나 클라우드 서비스와 함께 이용하여 Notion과 같은 노트앱으로 활용할 수 있습니다.
+</h2>
+    
+
+    
+      <div class="post-time">
+        <i class="ri-calendar-line"></i>
+        <time>January 19, 2022</time>
+      </div>
+    
+
+  </header>
+
+  <section class="post-content markdown-body">
+    <h2 id="옵시디안이란">옵시디안이란</h2>
+<p>옵시디안은 오픈소스 마크다운 문서 관리 툴입니다.</p>
+
+<p>개인적으로는 옵시디안의 Git 플러그인을 활용하여 <code class="language-plaintext highlighter-rouge">마크다운 + Git</code>이라는 조합을 통해 노트앱으로 사용하고 있습니다.</p>
+
+<p>노트앱으로 유명한 것에는 Notion, Evernote 등이 있습니다만, 둘의 특징으로는 특정 회사의 서비스에 종속된다는 점이 있습니다. 한 때 잘나갔던 에버노트가 몰락했듯이, 노션도 그러지 말라는 법은 없겠죠.</p>
+
+<p>또한 Notion은 마크다운을 지원하는 것 같으면서도 완벽한 마크다운 문법을 지원하지는 않고, 독자적인 방식으로 지원합니다. 예를 들자면 노션에는 헤딩이 h1~h3까지 밖에 없습니다. 그리고 콜아웃, 링크 북마크 같은 기능은 노션에서 볼 때는 분명 예쁘지만, 마크다운으로 임포트하면 지원되지 않는 기능입니다.</p>
+
+<p>Typora는 유명한 마크다운 에디터인데요, 최근에 유료로 바뀌었습니다. 타이포라에서 제공하는 기능들을 옵시디언에서도 대부분 지원하고 있으니 타이포라의 대체품을 찾는 분에게 옵시디언은 좋은 선택지가 될 것 같습니다.</p>
+
+<h2 id="옵시디안-시작하기">옵시디안 시작하기</h2>
+<p><a href="https://obsidian.md/">옵시디안 공식 홈페이지</a>에서 프로그램을 다운로드합니다.</p>
+
+<p><img src="images/obsidian/Pasted%20image%2020220119063157.png" alt="옵시디안 시작하기" /></p>
+
+<p>사용법은 마크다운을 안다면 어려울 것이 없습니다.</p>
+
+<p>마크다운 에디터로서의 기능과 함께 <a href="https://help.obsidian.md/How+to/Working+with+tags">태그 기능</a>을 통한 문서 분류, 강력한 검색 기능 등을 제공하기에 노트앱으로도 활용이 가능합니다.</p>
+
+<h2 id="옵시디안-git-플러그인-사용하기">옵시디안 Git 플러그인 사용하기</h2>
+<p>문서를 백업하는 데에는 구글 드라이브 같은 클라우드 서비스를 사용할 수도 있을 테고, 옵시디언에서 유료로 제공하는 동기화 서비스를 사용할 수도 있겠습니다.</p>
+
+<p>개인적으로는 Git + Github를 통한 관리를 선호하기에 <a href="https://github.com/denolehov/obsidian-git">obsidian-git</a> 플러그인을 통해 노트를 백업해봅시다.</p>
+
+<p><img src="images/obsidian/Pasted%20image%2020220119063326.png" alt="옵시디안 Git 플러그인 사용하기" />
+설정에서 <code class="language-plaintext highlighter-rouge">서드파티 플러그인</code> 탭을 누른 다음 <code class="language-plaintext highlighter-rouge">안전 모드</code>를 해제하고, <code class="language-plaintext highlighter-rouge">검색</code>을 눌러 <code class="language-plaintext highlighter-rouge">Obsidian Git</code>을 검색하여 설치하면 됩니다.</p>
+
+<p><img src="images/obsidian/Pasted%20image%2020220119063424.png" alt="옵시디안 Git 플러그인 사용하기" />
+그리고 <kbd><kbd>Crtl</kbd> + <kbd>P</kbd></kbd> 키를 통해 여러 옵시디안 명령어를 실행할 수 있는데요, <code class="language-plaintext highlighter-rouge">Git</code>을 입력하여 명령어를 실행하면 됩니다.</p>
+
+<p><img src="images/obsidian/Pasted%20image%2020220119060706.png" alt="옵시디안 Git 플러그인 사용하기" />
+혹은 오른쪽 상단에서 Git 그래프 모양의 탭을 눌러 사용할 수도 있습니다.</p>
+
+<p><img src="images/obsidian/Pasted%20image%2020220119063455.png" alt="옵시디안 Git 플러그인 사용하기" />
+설정 탭에서는 시간 당 자동 커밋, 자동 푸시 등의 기능도 제공하고 있습니다.</p>
+
+<h2 id="소감">소감</h2>
+<p>옵시디언을 통한 문서 관리가 사용성이 상당히 괜찮긴하지만, 아무래도 모바일 연동성이나 협업에 있어서는 노션이 더 편리한 느낌이었습니다.</p>
+
+<p>개인적으로 저는 휴대폰으로 볼 일이 많은 일기 같은 건 노션으로 작성하고, 개발과 관련된 개인적인 메모는 옵시디언으로 기록하고 있습니다.</p>
+
+  </section>
+
+</article>
+
+
+  <section class="comments-container">
+    
+    <script src="https://utteranc.es/client.js"
+        repo="leetaewook/leetaewook.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async
+        
+        >
+</script>
+  
+
+  </section>
+
+</main>
+        
+
+
+
+
+
+        <footer class="footer">
+  
+    <section class="copyright">&copy; 2022~ leetaewook</section>
+  
+  <section class="powerby">Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/leetaewook/jekyll-theme-twail">Twail theme</a></section>
+</footer>
+      </div>
+    </div>
+  
+    
+
+  
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK913LCVZT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK913LCVZT', { 'anonymize_ip': false});
+</script>
+
+    
+
+
+  </body>
+</html>

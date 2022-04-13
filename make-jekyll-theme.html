@@ -1,0 +1,624 @@
+
+
+<!DOCTYPE html>
+<html lang="ko-KR">
+  
+
+
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Jekyll 테마 만들어서 배포하기 - 이태욱의 개발 블로그</title>
+
+<meta name="description" content="지킬 테마를 만들어서 배포하기까지의 과정을 적은 글입니다.">
+
+
+  <meta name="keywords" content="jekyll">
+
+
+
+
+<meta property="og:title" content="Jekyll 테마 만들어서 배포하기 - 이태욱의 개발 블로그">
+<meta property="og:description" content="지킬 테마를 만들어서 배포하기까지의 과정을 적은 글입니다.">
+<meta property="og:site_name" content="이태욱의 개발 블로그">
+<meta property="og:url" content="/make-jekyll-theme">
+<meta property="og:type" content="article">
+
+
+<meta property="og:locale" content="ko_KR">
+
+
+
+  <meta property="og:image" content="/images/make-jekyll-theme/cover.png">
+
+
+
+  <meta property="article:published_time" content="2022-01-15T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-01-16T05:08:32+09:00">
+
+
+<link rel="canonical" href="/make-jekyll-theme">
+
+
+
+
+
+  <meta name="google-site-verification" content="aVbO_HoQKonY1H5ajJ_lFbk9hiX2wrAiza8akt4g5O4" />
+
+
+
+
+
+  <meta name="naver-site-verification" content="1452174d19394af19e88280d09dfc03172ab3ee8">
+
+
+
+
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+  
+  <body>
+    <div class="main-container post">
+      <aside class="main-container__aside">
+        <header class="profile">
+  <figure class="profile__avatar">
+    
+      <a href="/"><img src="/assets/images/avatar.png" loading="lazy" alt="이태욱의 개발 블로그" /></a>
+    
+  </figure>
+  <div>
+    <div>
+      <a href="/">
+        <h1 class="profile__name">leetaewook</h1>
+        <h2 class="profile__description">만들고 싶은 게 많은 개발자입니다.</h2>
+      </a>
+    </div>
+    <ul class="profile__socials">
+      
+        <li><a href="https://github.com/leetaewook" target="_blank"><i class="ri-github-fill"></i></a></li>
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</header>
+        <section class="tagnav">
+  <h2 class="tagnav__title"><i class="ri-price-tag-3-line"></i><span>TAGS</span></h2>
+  <nav class="tagnav__wrapper">
+    
+    
+    
+    
+    
+    
+      <a class="tagnav__item" href="/tag/jekyll/index.html">jekyll</a>
+    
+    
+    
+      <a class="tagnav__item" href="/tag/tool/index.html">tool</a>
+    
+    
+    
+      <a class="tagnav__item" href="/tag/frontend/index.html">frontend</a>
+    
+    
+    
+    
+    
+  
+  </nav>
+</section>
+      </aside>
+      <div class="content">
+        
+        <main>
+
+<article class="post-container">
+  
+    <section class="post-cover">
+      <a href="/make-jekyll-theme"><img src="/images/make-jekyll-theme/cover.png"></a>
+    </section>
+  
+    
+  <header class="post-summary">
+      
+      <ul class="post-tags">
+        
+          <li><h4 class="post-tag">jekyll</h4></li>
+        
+      </ul>
+    
+    
+    
+      <h1 class="post-title">Jekyll 테마 만들어서 배포하기
+</h1>
+    
+
+    
+      <h2 class="post-description">지킬 테마를 만들어서 배포하기까지의 과정을 적은 글입니다.
+</h2>
+    
+
+    
+      <div class="post-time">
+        <i class="ri-calendar-line"></i>
+        <time>January 15, 2022</time>
+      </div>
+    
+
+  </header>
+
+  <section class="post-content markdown-body">
+    <h2 id="다짐">다짐</h2>
+<p>Jekyll은 Ruby로 개발된 정적 사이트 생성기입니다. 마크다운으로 글을 작성하면, 그것을 바탕으로 HTML을 생성하여 웹사이트를 만들 수 있게 도와줍니다.</p>
+
+<p>이 때 웹사이트가 가질 여러가지 기능과 디자인을 가져다 쓰기 쉽도록 미리 만들어둔 것이 테마입니다.</p>
+
+<p>블로그를 위한 Jekyll 테마를 찾아보다가, 개인적인 취향에 맞게 직접 테마를 만들어보기로 하였습니다.</p>
+
+<h2 id="jeykll-빈-테마-생성">Jeykll 빈 테마 생성</h2>
+<p><a href="https://jekyllrb.com/docs/themes/#creating-a-gem-based-theme">Jekyll 공식 문서</a>에서는 지킬로 테마를 만드는 방법을 간략히 설명하고 있습니다.</p>
+
+<p>Ruby가 설치되어 있다고 가정하겠습니다. Jekyll을 설치하고 새로운 테마를 만들어봅시다.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler jekyll
+jekyll new-theme my-theme-name
+<span class="c"># my-theme-name 폴더에 빈 테마가 생성됩니다.</span>
+</code></pre></div></div>
+
+<p>빈 테마를 생성하였다면, 폴더에는 <code class="language-plaintext highlighter-rouge">my-theme-name.gemspec</code> 파일이 존재할 것입니다. 우선 여기 적혀있는 <code class="language-plaintext highlighter-rouge">TODO</code>를 없앱시다. 왜냐하면 <code class="language-plaintext highlighter-rouge">.gemspec</code>에 <code class="language-plaintext highlighter-rouge">TODO</code>라는 단어가 있으면 bundle 시에 에러가 발생합니다.</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># my-theme-name.gemspec</span>
+
+<span class="c1"># 여기 적혀있는 TODO들을 없앱시다.</span>
+<span class="n">spec</span><span class="p">.</span><span class="nf">summary</span>       <span class="o">=</span> <span class="s2">"My Jekyll theme!"</span>
+<span class="n">spec</span><span class="p">.</span><span class="nf">homepage</span>      <span class="o">=</span> <span class="s2">"https://github.com/YourName/RepoName"</span>
+</code></pre></div></div>
+
+<p>그리고 다음 명령어로 Jekyll 개발 서버를 실행해봅니다.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve <span class="nt">--port</span><span class="o">=</span>4000
+<span class="c"># http://127.0.0.1:4000에 개발 서버가 실행됩니다.</span>
+</code></pre></div></div>
+
+<figure class="align-center">
+   <img src="/images/make-jekyll-theme/1.png" />
+</figure>
+<p><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a>에 접속하면 위와 같은 화면을 만날 수 있습니다. 서버는 동작하지만, 아직 레이아웃이 존재하지 않는 모습입니다.</p>
+
+<h2 id="포스트-작성하기">포스트 작성하기</h2>
+<p>레이아웃을 작성하기 전에, 테스트로 사용할 포스트를 작성해봅시다.</p>
+
+<p>Jeykll의 기본 명세에 따라 <code class="language-plaintext highlighter-rouge">/_posts/2021-01-01-pathname.md</code>와 같은 곳에 마크다운으로 글을 적습니다. 마크다운의 제일 앞 부분에는 대시 두 줄을 긋고 YAML 양식으로 해당 포스트의 타이틀, 카테고리, 태그와 같은 것들을 입력합니다.</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">테스트용 글입니다.</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">test</span><span class="pi">,</span> <span class="nv">jekyll</span><span class="pi">]</span>
+<span class="na">cover</span><span class="pi">:</span> <span class="s">https://source.unsplash.com/random</span>
+<span class="nn">---</span>
+
+<span class="gh"># 안녕하세요</span>
+테스트용 글입니다!
+</code></pre></div></div>
+
+<h2 id="_configyml-작성하기">_config.yml 작성하기</h2>
+<p><code class="language-plaintext highlighter-rouge">/.config.yml</code>에서는 Jekyll과 관련된 여러 설정을 할 수 있습니다. 여기에 적는 값들은 나중에 Liquid로 레이아웃을 작성할 때 활용할 수 있습니다. HTML에 값들을 하드코딩으로 넣을 수도 있지만, 여기에 변수들로 적어놓으면 다른 사람들이 쉽게 변경해서 사용 할 수 있습니다.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">나의</span><span class="nv"> </span><span class="s">웹사이트'</span>
+<span class="na">locale</span><span class="pi">:</span> <span class="s1">'</span><span class="s">ko-KR'</span>
+<span class="c1"># 나중에 레이아웃에서 site.title, site.locale과 같은 형식으로 사용할 수 있습니다.</span>
+</code></pre></div></div>
+
+<h2 id="레이아웃-작성하기">레이아웃 작성하기</h2>
+<p>Jekyll은 HTML 작성을 위해 <code class="language-plaintext highlighter-rouge">Liquid</code>라는 템플릿 언어를 사용합니다. 지킬 박사와 하이드씨에서 지킬이 마시는 약이 연상되는 이름입니다.</p>
+
+<p>Liquid는 어렵지 않아서, 코드를 바로 보면서 익히면 됩니다.</p>
+
+<p>우선, 웹의 루트 페이지가 반환할 레이아웃을 <code class="language-plaintext highlighter-rouge">/index.html</code>에 작성합니다.</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s1">'</span><span class="s">home'</span> <span class="c1"># 웹의 루트 페이지가 `/_layouts/home.html`을 반환하게 됩니다.</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>그리고 <code class="language-plaintext highlighter-rouge">/_layouts/home.html</code>을 작성합니다.</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s1">'</span><span class="s">default'</span>
+<span class="nn">---</span>
+
+<span class="nt">&lt;ul&gt;</span>
+{% for post in site.posts %}
+  <span class="nt">&lt;li&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}"</span><span class="nt">&gt;&lt;h3&gt;</span>{{ post.title }}<span class="nt">&lt;/h3&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;p&gt;</span>{{ post.content | strip_html | truncatewords: 33, "" }}<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;hr&gt;</span>
+{% endfor %}
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+<p>간략하게 현재 작성한 포스트들의 제목과 내용을 출력하도록 만들었습니다. 여기에 작성한 코드들은 default 레이아웃의 <code class="language-plaintext highlighter-rouge">{{ content }}</code>에 들어가게 됩니다.</p>
+
+<p>관습에 따라 <code class="language-plaintext highlighter-rouge">/_layouts/default.html</code>에는 모든 페이지에 적용될 레이아웃을 작성합니다.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="err">{%</span> <span class="na">if</span> <span class="na">site.locale</span> <span class="err">%}</span><span class="na">lang=</span><span class="s">{{</span> <span class="na">site.locale</span> <span class="err">}}{%</span> <span class="na">endif</span> <span class="err">%}</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;head&gt;</span>
+      <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;title&gt;</span>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}<span class="nt">&lt;/title&gt;</span>
+   <span class="nt">&lt;/head&gt;</span>
+   <span class="nt">&lt;body&gt;</span>
+      <span class="nt">&lt;header&gt;</span>헤더<span class="nt">&lt;/header&gt;</span>
+      <span class="nt">&lt;div&gt;</span>{{ content }}<span class="nt">&lt;/div&gt;</span>
+   <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<figure class="align-center">
+   <img src="/images/make-jekyll-theme/2.png" />
+</figure>
+
+<p>잘 만들어지고 있습니다.</p>
+
+<h2 id="페이지네이션-구현">페이지네이션 구현</h2>
+<p>작성한 <code class="language-plaintext highlighter-rouge">/_layouts/home.html</code>의 코드를 다시 한 번 봅시다.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+---
+
+<span class="nt">&lt;ul&gt;</span>
+{% for post in site.posts %}
+  <span class="nt">&lt;li&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}"</span><span class="nt">&gt;&lt;h3&gt;</span>{{ post.title }}<span class="nt">&lt;/h3&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;p&gt;</span>{{ post.content | strip_html | truncatewords: 33, "" }}<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;hr&gt;</span>
+{% endfor %}
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<p>현재 for 구문의 posts에 갯수 제한이 없습니다. 저는 모든 posts 정보를 한번에 출력하는 대신에 페이지네이션을 구현하고 싶습니다.</p>
+
+<p>그러기 위해서 for문에 갯수 제한을 두고, <code class="language-plaintext highlighter-rouge">/page1</code>, <code class="language-plaintext highlighter-rouge">/page2</code> 와 같은 방식으로 페이지네이션을 위한 페이지를 만들어주어야할 것입니다.</p>
+
+<p>편안하게도, 이러한 기능이 Jekyll 플러그인으로 구현되어있습니다. 페이지네이션을 위한 플러그인으로는 <code class="language-plaintext highlighter-rouge">jekyll-paginate</code>를 사용할 수도 있고, <code class="language-plaintext highlighter-rouge">jekyll-paginate-v2</code>를 사용할 수도 있습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">jekyll-paginate</code>은 태그, 카테고리 등으로 분류된 상태에서 페이지네이션을 지원하지 않습니다. 반면에 <code class="language-plaintext highlighter-rouge">jekyll-paginate-v2</code>는 지원합니다.</p>
+
+<p>그대신 <code class="language-plaintext highlighter-rouge">jekyll-paginate-v2</code>는 Github Page에서 지원하지 않는 플러그인이라는 단점이 있습니다. Github는 Jekyll로 작성된 코드를 그냥 푸시하는 것만으로 알아서 빌드해서 Github Page로 배포해주는데요, Github Page가 지원하지 않는 Jekyll 플러그인을 사용하면 로컬에서 빌드 후 푸시하여야합니다.</p>
+
+<p>저는 태그 페이지에서도 페이지네이션을 적용하고 싶으므로, <a href="https://github.com/sverrirs/jekyll-paginate-v2">jekyll-paginate-v2</a>를 택했습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">/my-theme-name.gemspec</code>에 다음을 추가합니다.</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">spec</span><span class="p">.</span><span class="nf">add_runtime_dependency</span> <span class="s2">"jekyll-paginate-v2"</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">/_config.yml</code>에 다음을 추가합니다.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">permalink</span><span class="pi">:</span> <span class="s">/:title</span>
+
+<span class="na">pagination</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">per_page</span><span class="pi">:</span> <span class="m">4</span>
+  <span class="na">permalink</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/page:num/'</span>
+  <span class="na">limit</span><span class="pi">:</span> <span class="m">0</span>
+  <span class="na">sort_field</span><span class="pi">:</span> <span class="s1">'</span><span class="s">date'</span>
+  <span class="na">sort_reverse</span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-paginate-v2</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">/input.html</code>을 수정합니다.</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">home</span>
+<span class="na">pagination</span><span class="pi">:</span> 
+  <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>마지막으로, <code class="language-plaintext highlighter-rouge">/_layouts/home.html</code>을 수정합니다.</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
+<span class="nn">---</span>
+
+<span class="nt">&lt;ul&gt;</span>
+{% for post in paginator.posts %}
+  <span class="nt">&lt;li&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}"</span><span class="nt">&gt;&lt;h3&gt;</span>{{ post.title }}<span class="nt">&lt;/h3&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;p&gt;</span>{{ post.content | strip_html | truncatewords: 33, "" }}<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;hr&gt;</span>
+{% endfor %}
+<span class="nt">&lt;/ul&gt;</span>
+
+{% if paginator.total_pages &gt; 1 %}
+<span class="nt">&lt;ul&gt;</span>
+  {% if paginator.previous_page %}
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ paginator.previous_page_path }}"</span><span class="nt">&gt;</span>Newer<span class="nt">&lt;/a&gt;</span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ paginator.next_page_path }}"</span><span class="nt">&gt;</span>Older<span class="nt">&lt;/a&gt;</span>
+  {% endif %}
+<span class="nt">&lt;/ul&gt;</span>
+{% endif %}
+</code></pre></div></div>
+
+<figure class="align-center">
+   <img src="/images/make-jekyll-theme/3.png" />
+</figure>
+
+<p>메인 페이지에 페이지네이션이 생겼습니다.</p>
+
+<h2 id="태그-구현">태그 구현</h2>
+<p>우선, <code class="language-plaintext highlighter-rouge">/_layouts/home.html</code>에서 포스트가 가지는 태그들도 같이 출력되도록 해봅시다.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+{% for post in paginator.posts %}
+  <span class="nt">&lt;li&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}"</span><span class="nt">&gt;&lt;h3&gt;</span>{{ post.title }}<span class="nt">&lt;/h3&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;p&gt;</span>{{ post.content | strip_html | truncatewords: 33, "" }}<span class="nt">&lt;/p&gt;</span>
+
+    <span class="c">&lt;!-- 태그를 출력합니다 --&gt;</span>
+    {% if post.tags %}
+      {% for tag in post.tags %}
+        <span class="nt">&lt;span&gt;</span>{{ tag }} <span class="nt">&lt;/span&gt;</span>
+      {% endfor %}
+    {% endif %}
+
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;hr&gt;</span>
+{% endfor %}
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre></div></div>
+
+<figure class="align-center">
+   <img src="/images/make-jekyll-theme/4.png" />
+</figure>
+<p>포스트가 가지는 태그들이 출력됩니다.</p>
+
+<p>이제, 태그들을 모아서 글을 볼 수 있도록 해봅시다. 이를 위해선 태그들 마다의 페이지를 만들어야할텐데, jekyll-paginate-v2이 자동적으로 페이지를 생성할 수 있게 도와줍니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">/_config.yml</code>에 추가합니다.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">autopages</span><span class="pi">:</span>
+  <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
+  <span class="na">collections</span><span class="pi">:</span>
+    <span class="na">enabled</span><span class="pi">:</span> <span class="no">false</span>
+  <span class="na">tags</span><span class="pi">:</span>
+    <span class="na">enabled</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">layouts</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">autopage_tags.html</span>
+</code></pre></div></div>
+
+<p>autopage를 위한 파일을 만들기 전에, 블로그에 존재하는 태그들이 무엇이 있나 확인할 수 있는 nav를 만들어봅시다. 저는 <code class="language-plaintext highlighter-rouge">/_layouts/default.html</code> 에 바로 넣었습니다.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- 생략 --&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;header&gt;</span>헤더<span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;nav&gt;</span>
+      <span class="nt">&lt;hr&gt;</span>
+      <span class="nt">&lt;h3&gt;</span>태그들의 목록<span class="nt">&lt;/h3&gt;</span>
+      {% for page in site.pages %}  
+        {% if page.title and page.autogen == nil and page.autopage != nil %}
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ page.url }}"</span><span class="nt">&gt;</span>{{ page.autopage.display_name }}<span class="nt">&lt;/a&gt;</span>
+        {% endif %}
+      {% endfor %}
+      <span class="nt">&lt;hr&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;div&gt;</span>{{ content }}<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+
+<figure class="align-center">
+   <img src="/images/make-jekyll-theme/5.png" />
+</figure>
+<p>블로그에 존재하는 태그들의 목록을 확인할 수 있습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">/_layouts/autopage_tags.html</code>을 생성하고, 자동 생성될 태그 페이지가 가질 레이아웃을 정의합니다.</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+---
+
+<span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>태그: {% if page.autopages %}{{page.autopages.display_name}}{% endif %}<span class="nt">&lt;/h1&gt;</span>
+
+  <span class="nt">&lt;ul&gt;</span>
+    {% for post in paginator.posts %}
+      <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ post.url }}"</span><span class="nt">&gt;&lt;h3&gt;</span>{{ post.title }}<span class="nt">&lt;/h3&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;p&gt;</span>{{ post.content | strip_html | truncatewords: 33, "" }}<span class="nt">&lt;/p&gt;</span>    
+        {% if post.tags %}
+          {% for tag in post.tags %}
+            <span class="nt">&lt;span&gt;</span>{{ tag }} <span class="nt">&lt;/span&gt;</span>
+          {% endfor %}
+        {% endif %}
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;hr&gt;</span>
+    {% endfor %}
+    <span class="nt">&lt;/ul&gt;</span>
+
+  {% if paginator.total_pages &gt; 1 %}
+  <span class="nt">&lt;ul&gt;</span>
+    {% if paginator.previous_page %}
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ paginator.previous_page_path }}"</span><span class="nt">&gt;</span>Newer<span class="nt">&lt;/a&gt;</span>
+    {% endif %}
+    {% if paginator.next_page %}
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ paginator.next_page_path }}"</span><span class="nt">&gt;</span>Older<span class="nt">&lt;/a&gt;</span>
+    {% endif %}
+  <span class="nt">&lt;/ul&gt;</span>
+  {% endif %}
+  
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<figure class="align-center">
+   <img src="/images/make-jekyll-theme/6.png" />
+</figure>
+<p>이제 특정 태그에 관한 포스트만 확인할 수 있습니다.</p>
+
+<h2 id="스타일링">스타일링</h2>
+<p>기능들은 대충 구현되었으니, 이제 블로그를 예쁘게 만들 차례입니다.</p>
+
+<p>우선, 포스트를 눌렀을 때 사용할 레이아웃도 정의하여야합니다. <code class="language-plaintext highlighter-rouge">_config.yml</code>에 추가합니다.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">defaults</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">values</span><span class="pi">:</span>
+      <span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+</code></pre></div></div>
+<p>이제 <code class="language-plaintext highlighter-rouge">_post</code>에 작성된 마크다운은 기본적으로 <code class="language-plaintext highlighter-rouge">_layouts/post.html</code> 레이아웃을 사용하게 됩니다.</p>
+
+<p>그리고  <code class="language-plaintext highlighter-rouge">_includes</code> 폴더에서 일종의 partial을 정의해두고 <code class="language-plaintext highlighter-rouge">{% include 파일명.html %}</code>와 같이 가져다 쓸 수 있습니다. 예를 들면 다음과 같이 사용할 수 있습니다.</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- /_includes/head.html --&gt;</span>
+
+{% assign title_separator = site.title_separator | default: '-' | replace: '|', '<span class="ni">&amp;#124;</span>' %}
+
+{%- if paginator -%}
+  {%- assign title = site.title -%}
+{%- else -%}
+  {%- assign title = page.title | append: " " | append: title_separator | append: " " | append: site.title -%}
+{%- endif -%}
+{%- assign title = title | markdownify | strip_html | strip_newlines | escape_once -%}
+
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;title&gt;</span>{{ title | default: site.title }}<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/assets/css/main.css"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</code></pre></div></div>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- /_layouts/default.html --&gt;</span>
+
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="err">{%</span> <span class="na">if</span> <span class="na">site.locale</span> <span class="err">%}</span><span class="na">lang=</span><span class="s">{{</span> <span class="na">site.locale</span> <span class="err">}}{%</span> <span class="na">endif</span> <span class="err">%}</span><span class="nt">&gt;</span>
+  {% include head.html %}
+  <span class="nt">&lt;body&gt;</span>
+    <span class="c">&lt;!-- 생략 --&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>이제 대망의 <del>노가다</del> CSS 작업을 할 차례입니다. <code class="language-plaintext highlighter-rouge">/_sass</code> 폴더에 CSS와 관련된 여러 partial들을 작성하고, 그것을 <code class="language-plaintext highlighter-rouge">/assets/css/styles.scss</code>에서 import해서 사용하면 됩니다.</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// _sass/main.scss</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">peru</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">/assets/css/styles.scss</code>에서는 특이한 점으로, Jekyll이 알아먹을 수 있게 앞에 대시 두 줄을 꼭 넣어야합니다.</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="c1"># assets/css/styles.scss</span>
+<span class="c1"># this ensures Jekyll reads the file to be transformed into CSS later</span>
+<span class="nn">---</span>
+
+@import 'main';
+</code></pre></div></div>
+
+<p>이제 partial을 나누어가며 HTML과 CSS 작업을 합니다.</p>
+
+<p>메인 화면을 만드는 데에 저는 다음 테마들을 참조했습니다.</p>
+<ul>
+  <li><a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistakes</a></li>
+  <li><a href="https://github.com/CaiJimmy/hugo-theme-stack">hugo-theme-stack</a></li>
+</ul>
+
+<p>메인 화면 다음으로, 본문 화면 CSS를 작성하여야합니다. 마크다운이 HTML로 변환된 이후를 생각하여 CSS를 작성하여야하는데, 저는 다음을 참조하였습니다.</p>
+<ul>
+  <li><a href="https://github.com/sindresorhus/github-markdown-css">github-markdown-css</a></li>
+  <li><a href="https://github.com/lepture/yue.css/">yue.css</a></li>
+</ul>
+
+<figure class="align-center">
+   <img src="/images/make-jekyll-theme/7.png" />
+</figure>
+<p>최종적으로 위와 같이 작업하였습니다.</p>
+
+<h2 id="배포하기">배포하기</h2>
+<p>간단한 데모 페이지와 README를 작성하고, Github Repo에는 사람들이 잘 찾을 수 있도록 <code class="language-plaintext highlighter-rouge">jekyll-theme</code>와 같은 topic을 추가합니다.</p>
+
+<p>이것만으로 해야 할 일은 다 한 것 같지만, gem도 빌드해서 배포해봅니다. 명령어 몇 줄로 정말 간단하게 배포할 수 있었습니다.
+우선, <a href="https://rubygems.org/">rubygems</a>에 회원가입합니다. 그리고 다음과 같이 빌드 후 푸시합니다.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem build <span class="c"># .gem 파일이 생성됩니다.</span>
+gem push my-theme-name-0.0.1.gem <span class="c"># rubygems 사이트에 푸시됩니다.</span>
+</code></pre></div></div>
+
+<p>제가 배포한 테마는 <a href="https://github.com/leetaewook/jekyll-theme-twail">jekyll-theme-twail</a>에서 확인할 수 있습니다.</p>
+
+  </section>
+
+</article>
+
+
+  <section class="comments-container">
+    
+    <script src="https://utteranc.es/client.js"
+        repo="leetaewook/leetaewook.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async
+        
+        >
+</script>
+  
+
+  </section>
+
+</main>
+        
+
+
+
+
+
+        <footer class="footer">
+  
+    <section class="copyright">&copy; 2022~ leetaewook</section>
+  
+  <section class="powerby">Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/leetaewook/jekyll-theme-twail">Twail theme</a></section>
+</footer>
+      </div>
+    </div>
+  
+    
+
+  
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PK913LCVZT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PK913LCVZT', { 'anonymize_ip': false});
+</script>
+
+    
+
+
+  </body>
+</html>
