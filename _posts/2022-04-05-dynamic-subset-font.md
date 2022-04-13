@@ -49,6 +49,7 @@ TTF 포맷의 경우, 로마자 폰트는 용량이 200KB가 안 되는 데에 �
 <figure class="align-center">
    <img src="/images/dynamic-subset-font/char-frequency.png">
 </figure>
+
 [Google Fonts의 한국어 지원에 관한 글](https://www.googblogs.com/tag/korean/)
 
 저희는 구글의 결과물(CSS)을 참조하여 폰트 파일을 쪼개면 되겠습니다.
@@ -139,4 +140,4 @@ node main.js
 Gmarket Sans 폰트의 다이나믹 서브셋을 Github CDN에 올려두었으니 이용하실 분들은 이용해주세요.
 [https://github.com/leetaewook/gmarket-sans-dynamic-subset](https://github.com/leetaewook/gmarket-sans-dynamic-subset)
 
-그리고 폰트의 라이센스에 주의하여야합니다. 많은 폰트들은 폰트 파일의 수정과 재배포에 제약을 가하고 있습니다. 하지만 이를 허용하는 폰트도 많이 있으니, 가능하다면 직접 다이나믹 서브셋을 만들어 웹사이트들을 최적화 해보면 좋을 것 같습니다.
+그리고 폰트의 라이센스에 주의하여야합니다. 많은 폰트들은 폰트 파일의 수정과 재배포에 제약을 가하고 있습니다. 하지만 이를 허용하는 폰트도 많이 있으니, 가능하다면 다이나믹 서브셋을 통하여 웹사이트들을 최적화하면 좋을 것 같습니다.
