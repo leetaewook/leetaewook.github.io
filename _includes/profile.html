@@ -8,7 +8,7 @@
     <div>
       <a href="{{ '/' | relative_url }}">
         <h1 class="profile__name">{{ site.profile.name }}</h1>
-        <h2 class="profile__description">{{ site.profile.description }}</h2>
+        {% if site.profile.description %}<h2 class="profile__description">{{ site.profile.description }}</h2>{% endif %}
       </a>
     </div>
     <ul class="profile__socials">
