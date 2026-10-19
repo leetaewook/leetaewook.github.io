@@ -1,6 +1,6 @@
 # Site settings
-title: '이태욱의 개발 블로그'
-description: '만들고 싶은 게 많은 개발자 이태욱의 개발 블로그입니다.'
+title: '개발 일기'
+description: '직접 부딪힌 문제와 해결 과정을 기록합니다.'
 title_seperator: '-' # "-" (default), "|", ...
 locale: 'ko-KR' # null (default), en-US, zh-CN, ...
 date_format: # "%B %-d, %Y" (default), "%Y. %m. %d", ... https://www.shortcutfoo.com/app/dojos/ruby-date-format-strftime/cheatsheet
